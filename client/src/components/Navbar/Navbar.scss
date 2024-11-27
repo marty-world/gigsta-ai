@@ -98,14 +98,16 @@
             }
 
             .join-active {
-                color: #1DBF73;
+                color: var(--white-color);
                 font-weight: 600;
                 font-size: 14px;
-                border: 1px solid #1DBF73;
+                transition: all 0.3s ease-in-out;
+                // border: 1px solid var(--green-color);
+                background-color: var(--primary-color);
 
                 &:hover {
-                    background-color: #1DBF73;
-                    border-color: #1DBF73;
+                    background-color: var(--secondary-color);
+                    border-color: var(--white-color);
                     color: #fff;
                 }
             }

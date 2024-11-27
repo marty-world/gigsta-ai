@@ -40,8 +40,12 @@
           color: white;
           font-weight: 500;
           font-size: 18px;
-          background-color: #1dbf73;
+          background-color: var(--primary-color);
           cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            background-color: var(--secondary-color);
+          }
 
           &:disabled {
             background-color: gray;
@@ -96,11 +100,11 @@
           }
   
           input:checked + .slider {
-            background-color: #2196f3;
+            background-color: var(--primary-color);
           }
   
           input:focus + .slider {
-            box-shadow: 0 0 1px #2196f3;
+            box-shadow: 0 0 1px var(--secondary-color);
           }
   
           input:checked + .slider:before {

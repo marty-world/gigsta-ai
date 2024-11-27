@@ -1,10 +1,14 @@
-* {
-    .link {
-      text-decoration: none;
-      color: inherit;
-    }
-  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  body {
-    overflow-x: hidden;
+* {
+  .link {
+    text-decoration: none;
+    color: inherit;
   }
+}
+
+body {
+  overflow-x: hidden;
+}
