@@ -4,6 +4,7 @@ import { CategoryCard, ProjectCard } from '../../components';
 import { cards, projects } from '../../data';
 
 import './Home.scss';
+import HeroSection from '../../components/Home/HeroSection';
 
 const Home = () => {
 
@@ -11,8 +12,9 @@ const Home = () => {
     window.scrollTo(0, 0)
   }, []);
   return (
-    <div className='home'>
-      <Featured />
+    <div className='wrapper main'>
+      <HeroSection />
+      {/* <Featured />
       <TrustedBy />
       <Slide slidesToShow={5}>
         {
@@ -50,10 +52,10 @@ const Home = () => {
             <video poster='https://fiverr-res.cloudinary.com/q_auto,f_auto,w_700,dpr_1.0/v1/attachments/generic_asset/asset/089e3bb9352f90802ad07ad9f6a4a450-1599517407052/selling-proposition-still-1400-x1.png' src="./media/video.mp4" controls></video>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Fiverr Business Component */}
-      <div className="features dark">
+      {/* <div className="features dark">
         <div className="container">
           <div className="item">
             <h2>fiverr business</h2>
@@ -85,7 +87,7 @@ const Home = () => {
             <ProjectCard key={card.id} data={card} />
           ))
         }
-      </Slide>
+      </Slide> */}
     </div>
   )
 }
