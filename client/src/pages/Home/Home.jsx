@@ -5,6 +5,8 @@ import { cards, projects } from '../../data';
 
 import './Home.scss';
 import HeroSection from '../../components/Home/HeroSection';
+import LandingSection from '../../components/Home/LandingSection';
+import ProductsSection from '../../components/Home/ProductsSection';
 
 const Home = () => {
 
@@ -14,6 +16,8 @@ const Home = () => {
   return (
     <div className='wrapper main'>
       <HeroSection />
+      <LandingSection />
+      <ProductsSection />
       {/* <Featured />
       <TrustedBy />
       <Slide slidesToShow={5}>

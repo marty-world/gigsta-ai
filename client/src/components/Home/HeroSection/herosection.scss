@@ -7,7 +7,6 @@
 }
 
 .heading__title {
-    color: #fff;
     leading-trim: both;
     text-edge: cap;
     font-weight: 600;
@@ -184,6 +183,12 @@
                 margin-bottom: calc(35px + 50 * ((100vw - 375px) / 835));
             }
 
+            svg {
+                background-color: transparent;
+                border: none;
+                box-shadow: none;
+            }
+
             svg path {
                 transition: stroke 0.3s;
             }
@@ -193,10 +198,10 @@
             color: #0e1218;
             leading-trim: both;
             text-edge: cap;
-            font-weight: 600;
+            font-weight: 800;
             margin-bottom: 5px;
-            font-size: 64px;
-            line-height: 64px;
+            font-size: 44px;
+            line-height: 44px;
 
             @media (max-width: 1210px) {
                 font-size: calc(45px + 19 * ((100vw - 375px) / 835));
@@ -210,7 +215,7 @@
             text-edge: cap;
             font-weight: 600;
             font-size: 20px;
-            line-height: 20px;
+            line-height: 28px;
 
             @media (max-width: 1210px) {
                 font-size: calc(16px + 4 * ((100vw - 375px) / 835));
