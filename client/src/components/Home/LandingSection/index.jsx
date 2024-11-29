@@ -38,7 +38,7 @@ const LandingSection = () => {
                         <div className="section-top-content__buttons">
                             <a className="section-top-content__buttons-link section-top-content__buttons-link--green"
                                 href="#">
-                                Explore
+                                Explore your business
                             </a>
                         </div>
                     </div>

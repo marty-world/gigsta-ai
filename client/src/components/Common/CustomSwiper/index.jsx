@@ -52,7 +52,7 @@ const CustomSwiper = () => {
                 <SwiperSlide style={{ textAlign: "center", padding: "50px" }}>
                     <div className="groups-section__card card">
                         <div className="card__inner">
-                            <p className="card__suptext card__suptext--pink">
+                            <p className="card__suptext card__suptext--primary">
                                 private Group
                             </p>
                             <div className="card__options card-options">
@@ -114,7 +114,7 @@ const CustomSwiper = () => {
                 <SwiperSlide style={{ textAlign: "center", padding: "50px" }}>
                     <div className="groups-section__card card">
                         <div className="card__inner">
-                            <p className="card__suptext card__suptext--pink">
+                            <p className="card__suptext card__suptext--primary2">
                                 private Group
                             </p>
                             <div className="card__options card-options">
@@ -176,7 +176,7 @@ const CustomSwiper = () => {
                 <SwiperSlide style={{ textAlign: "center", padding: "50px" }}>
                     <div className="groups-section__card card">
                         <div className="card__inner">
-                            <p className="card__suptext card__suptext--pink">
+                            <p className="card__suptext card__suptext--secondary2">
                                 private Group
                             </p>
                             <div className="card__options card-options">
@@ -238,7 +238,7 @@ const CustomSwiper = () => {
                 <SwiperSlide style={{ textAlign: "center", padding: "50px" }}>
                     <div className="groups-section__card card">
                         <div className="card__inner">
-                            <p className="card__suptext card__suptext--pink">
+                            <p className="card__suptext card__suptext--white bg-white">
                                 private Group
                             </p>
                             <div className="card__options card-options">
@@ -300,7 +300,7 @@ const CustomSwiper = () => {
                 <SwiperSlide style={{ textAlign: "center", padding: "50px" }}>
                     <div className="groups-section__card card">
                         <div className="card__inner">
-                            <p className="card__suptext card__suptext--pink">
+                            <p className="card__suptext card__suptext--pink bg-black text-white">
                                 private Group
                             </p>
                             <div className="card__options card-options">
