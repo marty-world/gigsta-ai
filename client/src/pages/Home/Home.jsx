@@ -16,8 +16,8 @@ const Home = () => {
   return (
     <div className='wrapper main'>
       <HeroSection />
-      <LandingSection />
       <ProductsSection />
+      <LandingSection />
       {/* <Featured />
       <TrustedBy />
       <Slide slidesToShow={5}>
