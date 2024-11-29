@@ -8,7 +8,7 @@
     transition: 0.5s all ease;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 99;
 
     &.active {
         background-color: var(--secondary-color);
@@ -90,28 +90,24 @@
                 }
             }
 
-            button {
+            a {
                 color: var(--white-color);
                 padding: 10px 20px;
                 border-radius: 5px;
-                font-size: 14px;
-                border: 1px solid #fff;
+                border: 1px solid var(--primary-color);
                 cursor: pointer;
-                background-color: transparent;
+                background-color: var(--primary-color);
 
                 transition: all 0.3s ease-in-out;
                 &:hover {
-                    background-color: var(--green-color);
-                    border-color: var(--gray-color);
+                    background-color: transparent;
+                    border-color: var(--white-color);
                 }
             }
 
             .join-active {
                 color: var(--white-color);
-                font-weight: 600;
-                font-size: 14px;
                 transition: all 0.3s ease-in-out;
-                // border: 1px solid var(--green-color);
                 background-color: var(--primary-color);
 
                 &:hover {

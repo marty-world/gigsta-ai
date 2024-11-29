@@ -119,20 +119,14 @@ const Navbar = () => {
           ) : (
             <>
               {!user && (
-                <span>
-                  <Link to="/login" className="link">
-                    Sign in
-                  </Link>
-                </span>
+                <Link to="/login" className="link">
+                  Sign in
+                </Link>
               )}
               {!user && (
-                <button
-                  className={showMenu || pathname !== "/" ? "join-active" : ""}
-                >
-                  <Link to="/register" className="link">
-                    Join
-                  </Link>
-                </button>
+                <Link to="/register" className={showMenu || pathname !== "/" ? "join-active" : "link"}>
+                  Join
+                </Link>
               )}
               {user && (
                 <div className="user" onClick={() => setShowPanel(!showPanel)}>

@@ -132,3 +132,43 @@
 .title {
     color: #fff;
 }
+
+.custom-container {
+    @apply container px-4 py-6 mx-auto;
+}
+
+.theme-section {
+    @apply py-[100px];
+}
+
+label {
+    @apply text-gray-400 text-[18px];
+}
+
+input,
+textarea {
+    border: 1px solid #4b515a;
+    background: unset;
+    leading-trim: both;
+    text-edge: cap;
+    @apply px-[24px] py-[13px] rounded-[10px] w-full text-white text-[14px] leading-[20px] font-[500];
+}
+
+button {
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+button:disabled {
+    background-color: gray;
+    color: #fff;
+    cursor: not-allowed;
+}
