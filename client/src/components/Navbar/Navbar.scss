@@ -3,7 +3,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #1A1B1D;
+    background-color: var(--secondary-color);
     color: #fff;
     transition: 0.5s all ease;
     position: sticky;
@@ -11,8 +11,16 @@
     z-index: 10;
 
     &.active {
-        background-color: #fff;
-        color: #000;
+        background-color: var(--secondary-color);
+        color: var(--white-color);
+
+        transition: 0.5s all ease;
+        button {
+            border-color: var(--primary-color) !important;
+            &:hover {
+                border-color: var(--white-color) !important;
+            }
+        }
     }
 
     .container {
@@ -91,6 +99,7 @@
                 cursor: pointer;
                 background-color: transparent;
 
+                transition: all 0.3s ease-in-out;
                 &:hover {
                     background-color: var(--green-color);
                     border-color: var(--gray-color);
@@ -98,14 +107,16 @@
             }
 
             .join-active {
-                color: #1DBF73;
+                color: var(--white-color);
                 font-weight: 600;
                 font-size: 14px;
-                border: 1px solid #1DBF73;
+                transition: all 0.3s ease-in-out;
+                // border: 1px solid var(--green-color);
+                background-color: var(--primary-color);
 
                 &:hover {
-                    background-color: #1DBF73;
-                    border-color: #1DBF73;
+                    background-color: var(--secondary-color);
+                    border-color: var(--white-color);
                     color: #fff;
                 }
             }
@@ -119,7 +130,7 @@
 
     .menu {
         width: 80%;
-        color: var(--gray-color);
+        color: var(--white-color);
 
         .menu-item {
             padding: 10px 0;

@@ -167,7 +167,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      {(showMenu || pathname !== "/") && (
+      {/* {(showMenu || pathname !== "/") && (
         <>
           <hr />
           <Slider className="menu" {...settings}>
@@ -180,7 +180,7 @@ const Navbar = () => {
             ))}
           </Slider>
         </>
-      )}
+      )} */}
     </nav>
   );
 };

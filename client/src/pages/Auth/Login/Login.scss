@@ -32,8 +32,13 @@
         color: white;
         font-weight: 500;
         font-size: 18px;
-        background-color: #1dbf73;
+        background-color: var(--primary-color);
         cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: var(--secondary-color);
+        }
 
         &:disabled {
           background-color: gray;
