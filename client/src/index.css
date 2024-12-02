@@ -134,11 +134,15 @@
 }
 
 .custom-container {
-    @apply container px-4 py-6 mx-auto;
+    @apply container mx-auto;
 }
 
 .theme-section {
-    @apply py-[100px];
+    @apply py-[100px] px-[30px];
+}
+
+.swiper-slide {
+    height: auto;
 }
 
 label {

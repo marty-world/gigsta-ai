@@ -7,6 +7,7 @@ import './Home.scss';
 import HeroSection from '../../components/Home/HeroSection';
 import LandingSection from '../../components/Home/LandingSection';
 import ProductsSection from '../../components/Home/ProductsSection';
+import BrandsSection from '../../components/Common/Brands';
 
 const Home = () => {
 
@@ -18,6 +19,7 @@ const Home = () => {
       <HeroSection />
       <ProductsSection />
       <LandingSection />
+      <BrandsSection />
       {/* <Featured />
       <TrustedBy />
       <Slide slidesToShow={5}>
