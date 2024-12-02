@@ -4,8 +4,10 @@ import "./landingsection.scss";
 const LandingSection = () => {
     return (
         <div className="theme-section !pt-0">
-            <div className="container p-4 mx-auto">
-                <div className="section-top__inner">
+            <div className="custom-container">
+                <div className="grid grid-cols-2 gap-4 rounded-[25px] border border-[#4b515a] flex items-center flex-wrap 
+                    gap-[20px] sm:gap-[30px] md:gap-[40px] lg:gap-[50px] xl:gap-[60px] p-[20px] 
+                    sm:p-[30px] md:p-[40px] lg:p-[50px] xl:p-[60px] justify-between self-center">
                     <div className="section-top__content section-top-content">
                         <p className="section-top-content__date">
                             <span className="text-primary">E</span>xplore your business
