@@ -3,31 +3,32 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: var(--secondary-color);
+    background-color: #0e1218;
     color: #fff;
     transition: 0.5s all ease;
     position: sticky;
+    border-bottom: 1px solid #4b515a;
     top: 0;
     z-index: 99;
 
-    &.active {
-        background-color: var(--secondary-color);
-        color: var(--white-color);
+    // &.active {
+    //     background-color: var(--secondary-color);
+    //     color: var(--white-color);
 
-        transition: 0.5s all ease;
-        button {
-            border-color: var(--primary-color) !important;
-            &:hover {
-                border-color: var(--white-color) !important;
-            }
-        }
-    }
+    //     transition: 0.5s all ease;
+    //     button {
+    //         border-color: var(--primary-color) !important;
+    //         &:hover {
+    //             border-color: var(--white-color) !important;
+    //         }
+    //     }
+    // }
 
     .container {
         width: 95%;
         display: flex;
         justify-content: space-between;
-        padding: 20px 30px;
+        padding: 25px 0px;
 
         .logo {
             font-size: 34px;
@@ -41,14 +42,13 @@
         .links {
             display: flex;
             align-items: center;
-            gap: 24px;
-            font-weight: 500;
+            gap: 35px;
+            font-weight: 400;
 
             .menu-links {
                 display: flex;
                 align-items: center;
-                gap: 24px;
-                font-weight: 500;
+                gap: 35px;
 
                 @media screen and (max-width: 800px) {
                     display: none;
@@ -90,14 +90,13 @@
                 }
             }
 
-            a {
+            .btn-primary {
                 color: var(--white-color);
-                padding: 10px 20px;
-                border-radius: 5px;
+                padding: 10px 25px;
+                border-radius: 8px;
                 border: 1px solid var(--primary-color);
                 cursor: pointer;
                 background-color: var(--primary-color);
-
                 transition: all 0.3s ease-in-out;
                 &:hover {
                     background-color: transparent;

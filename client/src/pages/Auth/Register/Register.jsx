@@ -84,7 +84,7 @@ const Register = () => {
           </div>
         </div>
         <div className="right">
-          <p className='text-white'>Already have an account? <Link to='/login' className='text-secondary poppins-semibold'>Signin</Link></p>
+          <p className='text-white'>Already have an account? <Link to='/login' className='text-secondary'>Signin</Link></p>
           <h2 className="text-4xl text-white font-[600]">I want to become a seller</h2>
           <div className="toggle">
             <label htmlFor="" className='!text-white'>Activate the seller account</label>

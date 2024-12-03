@@ -74,7 +74,7 @@ const CustomSwiper = () => {
                                 <p className="bg-primary p-2 text-xs rounded-theme-r-xs text-white py-1">
                                     {item.desc}
                                 </p>
-                                <a className="text-white text-4xl poppins-semibold text-left" href="group-profile.html">
+                                <a className="text-white text-4xl text-left" href="group-profile.html">
                                     {item.title}
                                 </a>
                             </div>

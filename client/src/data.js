@@ -212,4 +212,4 @@ export const gigs = [
   },
 ];
 
-export const categories = ["Website Design", "WordPress", "Logo Design", "AI Services"];
+export const categories = ["Web Development", "Design", "Video Editing", "Admin Work"];

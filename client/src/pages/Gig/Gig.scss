@@ -44,7 +44,7 @@
         }
 
         span {
-          font-size: 14px;
+          font-size: 16px;
           font-weight: 500;
         }
 
@@ -59,7 +59,7 @@
           }
 
           span {
-            font-size: 14px;
+            font-size: 16px;
             font-weight: bold;
             color: #ffc108;
           }
@@ -117,7 +117,7 @@
               }
 
               span {
-                font-size: 14px;
+                font-size: 16px;
                 font-weight: bold;
                 color: #ffc108;
               }
@@ -125,7 +125,7 @@
 
             button {
               background-color: white;
-              border-radius: 5px;
+              border-radius: 8px;
               border: 1px solid gray;
               padding: 10px;
             }
@@ -134,7 +134,7 @@
 
         .box {
           border: 1px solid lightgray;
-          border-radius: 5px;
+          border-radius: 8px;
           padding: 20px;
           margin-top: 20px;
 
@@ -179,7 +179,7 @@
       flex: 1;
       border: 1px solid lightgray;
       padding: 20px;
-      border-radius: 5px;
+      border-radius: 8px;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -211,7 +211,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-size: 14px;
+        font-size: 16px;
 
         .item {
           display: flex;
@@ -248,7 +248,7 @@
         border: none;
         font-size: 18px;
         cursor: pointer;
-        border-radius: 5px;
+        border-radius: 8px;
       }
 
       @media screen and (max-width: 900px) {
