@@ -100,9 +100,9 @@ const Navbar = () => {
   return (
     <nav className={showMenu || pathname !== "/" ? "navbar active" : "navbar"}>
       <div className="container">
-        <div className="logo">
+        <div className="logo flex items-center justify-center">
           <Link to="/" className="link">
-            <span className="text">GIGSTA</span>
+            <img src="/media/gigsta.png" alt="gigsta logo" className="max-w-20 md:max-w-24 lg:max-w-40" />
           </Link>
         </div>
 

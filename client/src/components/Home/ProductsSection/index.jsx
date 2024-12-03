@@ -7,7 +7,7 @@ const ProductsSection = () => {
         <section className="theme-section !pt-10">
             <div className="custom-container">
                 <h2 className="text-5xl text-white font-[600] mb-10">
-                    Our Projects:
+                    Popular Services:
                 </h2>
                 <CustomSwiper />
             </div>

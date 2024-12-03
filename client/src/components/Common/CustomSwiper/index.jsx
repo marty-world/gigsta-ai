@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "./customswiper.scss";
 
 import { cards } from "../../../data";
+import { Link } from "react-router-dom";
 
 const styles = {
     arrow: {
@@ -34,7 +35,7 @@ const styles = {
     },
     rightArrow: {
         right: "0px",
-    },
+    }
 };
 
 const CustomSwiper = () => {
@@ -42,10 +43,7 @@ const CustomSwiper = () => {
         <div style={{ position: "relative" }}>
             <Swiper
                 modules={[Navigation]}
-                navigation={{
-                    nextEl: ".custom-next",
-                    prevEl: ".custom-prev",
-                }}
+                navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
                 spaceBetween={30}
                 slidesPerView={4}
                 breakpoints={{
@@ -64,7 +62,7 @@ const CustomSwiper = () => {
                     1280: {
                         slidesPerView: 4,
                         spaceBetween: 30,
-                    },
+                    }
                 }}
             >
                 {cards.map((item, index) => <SwiperSlide style={{ textAlign: "center", padding: "30px" }} key={index}>
@@ -74,13 +72,13 @@ const CustomSwiper = () => {
                                 <p className="bg-primary p-2 text-xs rounded-theme-r-xs text-white py-1">
                                     {item.desc}
                                 </p>
-                                <a className="text-white text-3xl text-left font-semibold font-Display" href="group-profile.html">
+                                <Link className="text-white text-3xl text-left font-semibold font-Display hover:text-primary2" to={`/gigs?category=${item.slug}`}>
                                     {item.title}
-                                </a>
+                                </Link>
                             </div>
-                            <a className="card-box__poster" href="group-profile.html">
+                            <Link className="card-box__poster" to={`/gigs?category=${item.slug}`}>
                                 <img className="card-box__poster-img" src={item.img} alt="img" />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </SwiperSlide>)}
