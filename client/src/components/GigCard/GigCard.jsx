@@ -2,41 +2,40 @@ import { Link } from 'react-router-dom';
 import './GigCard.scss';
 
 const GigCard = (props) => {
-    const { data } = props;
+  const { data } = props;
 
   return (
-    <Link to={`/gig/${data._id}`} className="link">
-      <div className="gigCard">
-        <img src={data.cover} alt="" />
-        <div className="info">
-          <div className="user">
-            <img src={data.userID.image || './media/noavatar.png'} alt="" />
-            <span>{data.userID.username}</span>
-          </div>
-          <p>{data.title}</p>
-          <div className="star">
-            <img src="./media/star.png" alt="" />
+    <div className="p-10 bg-[#2d333c] rounded-theme-p-r flex flex-col w-full gap-4">
+      <Link className="card-box__poster overflow-hidden block min-h-72" to={`/gig/${data._id}`}>
+        <img className="card-box__poster-img" src={data.cover} alt="img" />
+        <p className="card-box__poster-text shadow-xl">
+          {data.price.toLocaleString('en-IN', {
+            maximumFractionDigits: 0,
+            style: 'currency',
+            currency: 'USD',
+          })}
+        </p>
+      </Link>
+      <Link className="card__title" to={`/gig/${data._id}`}>
+        {data.title}
+      </Link>
+      <ul className="card__list card-list flex justify-between">
+        <li className="card-list__item">
+          <Link className="card-list__link" to={`/gig/${data._id}`}>
+            <img className="w-8 h-8 rounded-full object-cover" src={data.userID.image || './media/noavatar.png'} alt="img" />
+            <span>by {data.userID.username}</span>
+          </Link>
+        </li>
+        <li className="card-list__item">
+          <p className="flex gap-2 items-center justify-center">
+            <img src="./media/star.png" alt="" className='w-5 h-5' />
             <span>{Math.round(data.totalStars / data.starNumber) || 0}</span>
             <span className='totalStars'>({data.starNumber})</span>
-          </div>
-        </div>
-        <hr />
-        <div className="detail">
-          <img src="./media/heart.png" alt="" />
-          <div className="price">
-            <span>STARTING AT</span>
-            <h2>
-              {data.price.toLocaleString('en-IN', {
-                maximumFractionDigits: 0,
-                style: 'currency',
-                currency: 'INR',
-              })}
-            </h2>
-          </div>
-        </div>
-      </div>
-    </Link>
+          </p>
+        </li>
+      </ul>
+    </div>
   )
 }
 
-export default GigCard
+export default GigCard;
