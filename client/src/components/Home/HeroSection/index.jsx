@@ -24,7 +24,7 @@ const HeroSection = () => {
                                 <input className="bg-transparent border rounded-theme-r-small h-full w-full p-5 pr-12 text-white" type="text" placeholder="Search for any service..." />
                             </div>
                         </form>
-                        <div className="flex gap-4 items-center flex-wrap mt-2"> <span className="text-white font-medium font-Grotesk">Popular:</span>
+                        <div className="flex gap-4 items-center flex-wrap mt-2"> <span className="text-white font-medium">Popular:</span>
                             {categories.map(item => (
                                 <button
                                     type="button"

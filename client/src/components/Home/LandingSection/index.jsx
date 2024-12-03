@@ -9,8 +9,8 @@ const LandingSection = () => {
                     gap-[20px] sm:gap-[30px] md:gap-[40px] lg:gap-[50px] xl:gap-[60px] p-[20px] 
                     sm:p-[30px] md:p-[40px] lg:p-[50px] xl:p-[60px] justify-between self-center">
                     <div className="section-top__content section-top-content">
-                        <p className="section-top-content__date">
-                            <span className="text-primary">E</span>xplore your business
+                        <p className="section-top-content__date font-medium">
+                            Explore your business
                         </p>
                         <h1 className="section-top-content__title title">
                             A whole world of freelance talent at your fingertips
