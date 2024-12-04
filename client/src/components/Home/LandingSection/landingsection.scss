@@ -227,19 +227,6 @@ $color_3: #fff;
     content: unset
 }
 
-.card-list__item::before {
-    content: "";
-    background: #7d838c;
-    width: 4px;
-    height: 4px;
-    position: absolute;
-    right: -12px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    border-radius: 100%
-}
 
 .card-list__rait {
     color: #fff;

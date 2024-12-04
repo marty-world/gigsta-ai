@@ -48,9 +48,8 @@ const Gigs = () => {
   return (
     <div className="custom-container theme-section">
       <div className='flex flex-col gap-2 items-start mb-4'>
-        <span className="breadcrumbs text-1xl font-Grotesk text-primary font-semibold">FIVERR {category[0]?.toUpperCase() + category.slice(1)}</span>
-        <h1 className='text-5xl font-semibold'>{category[0]?.toUpperCase() + category.slice(1)}</h1>
-        <p className='text-xl font-light'>Explore the boundaries of art and technology with Fiverr's {category} artists</p>
+        <h1 className='text-5xl font-semibold'>Top pro services in {category[0]?.toUpperCase() + category.slice(1)}</h1>
+        <p className='text-xl font-light'>Explore the boundaries of art and technology with Gigsta's {category} artists</p>
       </div>
       <div className="flex justify-between items-center gap-4">
         <div className='flex gap-2 justify-center h-full'>
@@ -65,8 +64,8 @@ const Gigs = () => {
               <span className='sortType'>{sortBy === 'sales' ? 'Best Selling' : 'Newest'}</span>
               <img src="./media/down.png" alt="" className='w-5' />
               
-              {openMenu && (<div className="bg-[#2d333c] shadow-xl rounded-theme-r-small p-4 absolute bottom-0 right-0 top-full h-full w-full">
-                {sortBy === 'sales' ? <span className='cursor-pointer' onClick={() => handleSortBy('createdAt')}>Newest</span> : <span className='cursor-pointer' onClick={() => handleSortBy('sales')}>Best Selling </span>}
+              {openMenu && (<div className="bg-[#2d333c] shadow-xl rounded-theme-r-small cursor-pointer p-4 absolute bottom-0 right-0 top-full h-full w-full">
+                {sortBy === 'sales' ? <span className='cursor-pointer p-0.4 absolute w-full' onClick={() => handleSortBy('createdAt')}>Newest</span> : <span className='cursor-pointer cursor-pointer p-0.4 absolute w-full' onClick={() => handleSortBy('sales')}>Best Selling </span>}
               </div>)}
             </div>
           </div>

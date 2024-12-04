@@ -65,7 +65,7 @@ const CustomSwiper = () => {
                     }
                 }}
             >
-                {cards.map((item, index) => <SwiperSlide style={{ textAlign: "center", padding: "30px" }} key={index}>
+                {cards.map((item, index) => <SwiperSlide style={{ textAlign: "center", padding: "26px" }} key={index}>
                     <div className="h-full">
                         <div className="card__inner items-start gap-4">
                             <div className="flex items-start flex-col gap-2">
@@ -87,7 +87,7 @@ const CustomSwiper = () => {
                 className="custom-prev"
                 style={{ ...styles.arrow, ...styles.leftArrow }}
             >
-                <FaAngleLeft className="text-white bg-transparent border-none" />
+                <FaAngleLeft className="text-stone-500 bg-transparent border-none" />
             </div>
             <div
                 className="custom-next"
