@@ -1,40 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import "./herosection.scss"
 import { IoSearch } from "react-icons/io5";
 import { categories } from "../../../data";
 import BrandsSection from "../../Common/Brands";
+import { useNavigate, Link } from "react-router-dom";
+
+const popularServices = [
+  { to: "/gigs?search=logo", label: "Design Logo" },
+  { to: "/gigs?search=eCommerce%20website", label: "eCommerce website" },
+  { to: "/gigs?search=branding", label: "Branding" },
+];
 
 const HeroSection = () => {
-    const subtitleClass = `text-secondary poppins-medium text-xs md:text-lg`;
+    const subtitleClass = `text-secondary text-xs md:text-lg`;
     const titleClass = `mb-2 text-white text-[24px] font-semibold leading-[32px] md:text-[64px] md:leading-[68px]`;
-
+    const [search, setSearch] = useState('');
+    const navigate = useNavigate();
+    
+    const handleSearch = () => {
+      if(search) {
+        navigate(`/gigs?search=${search}`);
+      }
+    }
+  
     return (
         <section className="main__heading heading">
             <div className="custom-container">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 items-center theme-section">
                     <div className="flex flex-col items-start gap-6">
                         <div>
-                            <h1 className={subtitleClass}>
-                                Design Lab
-                            </h1>
                             <h2 className={titleClass}>
-                                Find the perfect <span className="text-primary poppins-extralight-italic">freelance</span> services <br className="hidden lg:inline-block" />for your business
+                                Find the perfect <span className="text-primary">freelance</span> services <br className="hidden lg:inline-block" />for your business
                             </h2>
                         </div>
-                        <form className="filters-panel__form filters-panel-form" action="#">
-                            <div className="w-72 relative">
-                                <IoSearch className="absolute top-[50%] right-3 -translate-y-1/2 text-white bg-transparent border-none" />
-                                <input className="bg-transparent border rounded-theme-r-small h-full w-full p-4 pr-12 text-white" type="text" placeholder="Search..." />
+                        <div className="filters-panel__form filters-panel-form">
+                            <div className="w-34 relative">
+                                <IoSearch onClick={handleSearch} className="absolute top-[50%] right-3 -translate-y-1/2 text-white bg-transparent border-none w-[37px] h-[37px]" />
+                                <input className="bg-transparent border rounded-theme-r-small h-full w-full p-5 pr-12 text-white" 
+                                    onChange={(({ target: { value } }) => setSearch(value))} type="search" placeholder="Search for any service..." />
                             </div>
-                        </form>
-                        <div className="flex gap-4 items-center flex-wrap mt-2">
-                            {categories.map(item => (
-                                <button
-                                    type="button"
-                                    className="p-3 rounded-theme-r-small text-sm !bg-transparent text-white transition-all duration-600 
-                                            ease-in-out border-white border hover:!bg-secondary 
-                                            hover:border-secondary">{item}</button>
-                            ))}
+                        </div>
+                        <div className="flex gap-4 items-center flex-wrap mt-2"> <span className="text-white font-medium">Popular:</span>
+                            {popularServices.map((service, index) => (
+        <Link
+          key={index}
+          to={service.to}
+          className="p-3 min-h-[20px] leading-[14px] rounded-[5px] text-sm !bg-transparent text-white transition-all duration-600 
+                     ease-in-out border-slate-500 border hover:!bg-secondary hover:border-secondary"
+        >
+          {service.label}
+        </Link>
+      ))}
                         </div>
                         {/* <a className="px-6 py-4 flex justify-center items-center text-center text-white text-[14px] font-semibold leading-[20px] rounded-[10px] bg-primary transition-all duration-300 hover:bg-secondary" href="/">
                                 Build your business

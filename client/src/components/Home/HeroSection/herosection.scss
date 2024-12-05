@@ -1,12 +1,12 @@
-// .heading {
-//     padding-top: 100px;
-//     padding-bottom: 100px;
-
-//     @media(max-width: 1210px) {
-//         padding-top: calc(60px + 40 * ((100vw - 375px) / 835))
-//     }
-// }
-
+.w-34 {
+    width: 34rem; 
+    input {
+        &:focus-visible {
+            outline: 0;
+            border-color: var(--secondary-color);
+        }
+    }
+}
 .heading__title {
     leading-trim: both;
     text-edge: cap;

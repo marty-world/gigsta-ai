@@ -100,31 +100,28 @@ const Navbar = () => {
   return (
     <nav className={showMenu || pathname !== "/" ? "navbar active" : "navbar"}>
       <div className="container">
-        <div className="logo">
+        <div className="logo flex items-center justify-center">
           <Link to="/" className="link">
-            <span className="text">fiverr</span>
+            <img src="/media/gigsta.png" alt="gigsta logo" className="max-w-20 md:max-w-24 lg:max-w-40" />
           </Link>
-          <span className="dot">.</span>
         </div>
 
         <div className="links">
           <div className="menu-links">
-            <span>Fiverr Business</span>
-            <span>Explore</span>
-            <span>English</span>
-            {!user?.isSeller && <span>Become a Seller</span>}
+            <Link to="/gigs?search=">Explore</Link>
+            {!user?.isSeller && <Link to="/">Become a Seller</Link>}
           </div>
           {isLoading ? (
             <Loader size={35} />
           ) : (
             <>
               {!user && (
-                <Link to="/login" className="link">
+                <Link to="/login">
                   Sign in
                 </Link>
               )}
               {!user && (
-                <Link to="/register" className={showMenu || pathname !== "/" ? "join-active" : "link"}>
+                <Link to="/register" className="btn-primary">
                   Join
                 </Link>
               )}

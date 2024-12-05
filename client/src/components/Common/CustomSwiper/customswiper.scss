@@ -13,7 +13,10 @@
     justify-content: space-between;
     height: 100%
 }
-
+.filters-panel__form svg:hover {
+    fill: #0b6380;
+    transition: .3s ease-in-out;
+}
 .card__suptext {
     border-radius: 4px;
     background: #f9d442;
@@ -91,15 +94,24 @@
 .card__suptext--secondary2 {
     background: var(--secondary2-color)
 }
+.custom-next, .custom-prev {
+    --tw-border-opacity: 1;
+    border-color: rgb(100 116 139 / var(--tw-border-opacity, 1))!important;
+    transition: .4s ease-in-out;
+    }
 
+    .custom-next svg,
+    .custom-prev svg {
+        transition: .3s ease-in-out;
+}
 .card__title {
     color: #fff;
     leading-trim: both;
     text-edge: cap;
-    margin-bottom: 10px;
-    font-size: 36px;
-    line-height: 36px;
-    font-weight: 600;
+    margin-bottom: 0px;
+    font-size: 28px;
+    line-height: 31px;
+    font-weight: 400;
     -webkit-transition: color .3s, color .3s, border .3s;
     -o-transition: color .3s, color .3s, border .3s;
     transition: color .3s, color .3s, border .3s
@@ -170,7 +182,7 @@
     text-align: center;
     leading-trim: both;
     text-edge: cap;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 20px;
     width: 100%;
@@ -204,7 +216,7 @@
     leading-trim: both;
     text-edge: cap;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -340,7 +352,7 @@
     color: #0e1218;
     leading-trim: both;
     text-edge: cap;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 20px;
     -webkit-transition: color .3s;
@@ -355,6 +367,16 @@
 
 .card-options--active .card-options__btn {
     border: 1px solid #40444a
+}
+
+.custom-next:hover,
+.custom-prev:hover {
+    border-color: #ad6ca5 !important
+}
+
+.custom-next:hover svg,
+.custom-prev:hover svg {
+    fill: #ad6ca5 !important
 }
 
 .card-box {
@@ -392,7 +414,7 @@
     text-align: center;
     leading-trim: both;
     text-edge: cap;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 20px;
     width: 100%;

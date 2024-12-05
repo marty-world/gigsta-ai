@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     color: #ffffff;
-    margin: 50px 0;
-
+    margin: 50px 0 0;
+    background: #14181e;
     img {
         width: 24px;
         height: 24px;
@@ -20,13 +20,14 @@
             padding: 50px 0;
 
             .item {
-                width: 180px;
+                width: 280px;
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
 
                 h1 {
-                    font-size: 16px;
+                    font-size: 22px;
+                    font-weight: 500;
                     color: #ffffff;;
                 }
 

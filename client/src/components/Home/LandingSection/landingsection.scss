@@ -94,8 +94,8 @@ $color_3: #fff;
     text-align: center;
     leading-trim: both;
     text-edge: cap;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 500;
     line-height: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -227,19 +227,6 @@ $color_3: #fff;
     content: unset
 }
 
-.card-list__item::before {
-    content: "";
-    background: #7d838c;
-    width: 4px;
-    height: 4px;
-    position: absolute;
-    right: -12px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    border-radius: 100%
-}
 
 .card-list__rait {
     color: #fff;
@@ -266,7 +253,7 @@ $color_3: #fff;
     color: #7d838c;
     leading-trim: both;
     text-edge: cap;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     font-weight: 500
 }

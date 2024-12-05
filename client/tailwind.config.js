@@ -20,7 +20,8 @@ export default {
         'primary': '#ad6ca5',
         'primary2': '#c1ff72',
         'secondary': '#0b6380',
-        'secondary2': '#2af1c2'
+        'secondary2': '#2af1c2',
+        'grayColor': '#2d333c'
       },
       borderColor: {
         'primary': '#ad6ca5',
