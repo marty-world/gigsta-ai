@@ -169,6 +169,41 @@ h6 {
     height: auto;
 }
 
+.section-padding {
+    @apply p-[20px] sm:p-[30px] md:p-[40px] lg:p-[50px] xl:p-[60px];
+}
+
+.btn-primary {
+    @apply bg-primary border border-primary hover:border-secondary hover:bg-secondary transition-all duration-700 ease-in-out min-w-32 min-h-12 flex items-center justify-center gap-2 py-2 px-4 rounded-theme-r-small;
+}
+
+.btn-primary2 {
+    @apply bg-primary2 border border-primary2 hover:border-secondary hover:bg-secondary transition-all duration-700 ease-in-out min-w-32 min-h-12 flex items-center justify-center gap-2 py-2 px-4 rounded-theme-r-small;
+}
+
+.btn-secondary {
+    @apply bg-secondary border border-secondary hover:border-primary hover:bg-primary transition-all duration-700 ease-in-out min-w-32 min-h-12 flex items-center justify-center gap-2 py-2 px-4 rounded-theme-r-small;
+}
+
+.btn-secondary2 {
+    @apply bg-secondary2 border border-secondary2 hover:border-primary hover:bg-primary hover:text-white transition-all duration-700 ease-in-out min-w-32 min-h-12 flex items-center justify-center gap-2 py-2 px-4 rounded-theme-r-small;
+}
+
+.btn-primary-outline {
+    @apply btn-primary hover:bg-transparent hover:border-white;
+}
+
+.btn-secondary-outline {
+    @apply btn-secondary hover:bg-transparent hover:border-white;
+}
+
+svg {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
 label {
     @apply text-[18px] text-[#fff];
 }
