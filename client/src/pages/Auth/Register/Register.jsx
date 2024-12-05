@@ -66,16 +66,16 @@ const Register = () => {
           <input
             name="username"
             type="text"
-            placeholder="johndoe"
+            placeholder="johndoe*"
             onChange={handleChange}
           />
           <input
             name="email"
             type="email"
-            placeholder="email"
+            placeholder="Email*"
             onChange={handleChange}
           />
-          <input name="password" type="password" onChange={handleChange} />
+          <input name="password" type="password" placeholder="**********" onChange={handleChange} />
           <input type="file" onChange={(event) => setImage(event.target.files[0])} />
           <div className="section-top-content__buttons">
             <button disabled={loading} type='submit' className="section-top-content__buttons-link section-top-content__buttons-link--green w-full">
@@ -84,7 +84,7 @@ const Register = () => {
           </div>
         </div>
         <div className="right">
-          <p className='text-white'>Already have an account? <Link to='/login' className='text-secondary'>Signin</Link></p>
+          <p className='text-white'>Already have an account? <Link to='/login' className='text-secondary mx-4 font-[500] text-[#ad6ca5] underline'>Signin</Link></p>
           <h2 className="text-4xl text-white font-[600]">I want to become a seller</h2>
           <div className="toggle">
             <label htmlFor="" className='!text-white'>Activate the seller account</label>
@@ -96,11 +96,11 @@ const Register = () => {
           <input
             name="phone"
             type="text"
-            placeholder="+1 1234 567 890"
+            placeholder="+1 (516) 123-9879*"
             onChange={handleChange}
           />
           <textarea
-            placeholder="A short description of yourself"
+            placeholder="A short description of yourself*"
             name="description"
             id="description"
             cols="30"
