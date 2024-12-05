@@ -170,7 +170,7 @@ h6 {
 }
 
 label {
-    @apply text-gray-400 text-[18px];
+    @apply text-[18px] text-[#fff];
 }
 
 input,
@@ -184,13 +184,19 @@ textarea {
 
 button {
     color: white;
-    font-weight: 400;
-    font-size: 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    min-height: 50px;
+    letter-spacing: 1px;
+    font-size: 16px;
     background-color: var(--primary-color);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
-
+ select {
+   border: 1px solid #4b515a;
+   border-radius: 8px;
+}
 button:hover {
     background-color: var(--secondary-color);
 }
@@ -200,3 +206,52 @@ button:disabled {
     color: #fff;
     cursor: not-allowed;
 }
+
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    border-radius: 0;
+    overflow: hidden;
+    color: #fff;
+}
+
+.table tr {
+    height: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.table th {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 15px;
+    border: 1px solid #444444;
+}
+
+.table td {
+    padding: 12px 15px;
+    border: 1px solid #444444;
+}
+
+.table td img {
+    width: 50px;
+    height: 25px;
+    object-fit: cover;
+}
+
+.table .delete {
+    width: 20px;
+    cursor: pointer;
+}
+
+.myGigs .container .title h1,
+.orders .container .title h1,
+.messages .container .title h1{
+    font-weight: 500;
+    margin-bottom: 30px;
+    font-size: 32px;
+ }

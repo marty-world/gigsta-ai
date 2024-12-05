@@ -51,7 +51,7 @@ const Messages = () => {
             ? <div className='loader'> <Loader /> </div>
             : error
               ? 'Something went wrong!'
-              : <table>
+              : <table className='table'>
                 <thead>
                   <tr>
                     <th>{user.isSeller ? 'Buyer' : 'Seller'}</th>

@@ -63,7 +63,7 @@ const Orders = () => {
           <div className="title">
             <h1>Orders</h1>
           </div>
-          <table>
+          <table className='table'>
             <thead>
               <tr>
                 <th>Image</th>
@@ -89,7 +89,7 @@ const Orders = () => {
                     {order.price.toLocaleString("en-IN", {
                       maximumFractionDigits: 0,
                       style: "currency",
-                      currency: "INR",
+                      currency: "USD",
                     })}
                   </td>
                   <td>

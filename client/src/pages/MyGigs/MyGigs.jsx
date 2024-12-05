@@ -57,7 +57,7 @@ const MyGigs = () => {
                   <button>Add New Gig</button>
                 </Link>
               </div>
-              <table>
+              <table className='table'>
                 <thead>
                   <tr>
                     <th>Image</th>
@@ -82,7 +82,7 @@ const MyGigs = () => {
                         <td>{gig.price.toLocaleString("en-IN", {
                           maximumFractionDigits: 0,
                           style: "currency",
-                          currency: "INR",
+                          currency: "USD",
                         })}</td>
                         <td>{gig.sales}</td>
                         <td>

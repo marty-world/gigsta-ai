@@ -28,7 +28,7 @@ const HeroSection = () => {
                             {categories.map(item => (
                                 <button
                                     type="button"
-                                    className="p-3 rounded-theme-r-small text-sm !bg-transparent text-white transition-all duration-600 
+                                    className="p-3 min-h-[20px] leading-[14px] rounded-[5px] text-sm !bg-transparent text-white transition-all duration-600 
                                             ease-in-out border-slate-500 border hover:!bg-secondary 
                                             hover:border-secondary">{item}</button>
                             ))}

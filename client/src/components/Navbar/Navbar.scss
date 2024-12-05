@@ -50,12 +50,6 @@
                 display: flex;
                 align-items: center;
                 gap: 35px;
-
-                a {
-                font-family: "Clash Display";
-                    
-                }
-
                 @media screen and (max-width: 800px) {
                     display: none;
                 }
@@ -69,8 +63,8 @@
                 position: relative;
 
                 img {
-                    width: 32px;
-                    height: 32px;
+                    width: 36px;
+                    height: 36px;
                     object-fit: cover;
                     border-radius: 50%;
                 }
@@ -80,31 +74,31 @@
                     position: absolute;
                     top: 50px;
                     right: 0;
-                    padding: 20px;
                     z-index: 2;
-
-                    color: var(--gray-color);
+                    padding: 18px 0;
+                    color: #000;
                     font-weight: 400;
                     background-color: #fff;
-                    border: 1px solid lightgray;
-                    border-radius: 10px;
+                    border-radius: 8px;
                     transition: 0.5s all ease;
-
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
+                    a {
+                        padding: 5px 20px;
+
+                    }
                 }
             }
 
             .btn-primary {
                 color: var(--white-color);
-                padding: 10px 25px;
+                padding: 16px 25px;
                 border-radius: 8px;
                 border: 1px solid var(--primary-color);
                 cursor: pointer;
                 background-color: var(--primary-color);
                 transition: all 0.3s ease-in-out;
-                font-family: "Clash Display";
 
                 &:hover {
                     background-color: transparent;
