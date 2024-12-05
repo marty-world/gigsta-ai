@@ -91,15 +91,18 @@
 .card__suptext--secondary2 {
     background: var(--secondary2-color)
 }
-
+.custom-next, .custom-prev {
+    --tw-border-opacity: 1;
+    border-color: rgb(100 116 139 / var(--tw-border-opacity, 1))!important;
+}
 .card__title {
     color: #fff;
     leading-trim: both;
     text-edge: cap;
-    margin-bottom: 10px;
-    font-size: 36px;
-    line-height: 36px;
-    font-weight: 600;
+    margin-bottom: 0px;
+    font-size: 28px;
+    line-height: 31px;
+    font-weight: 400;
     -webkit-transition: color .3s, color .3s, border .3s;
     -o-transition: color .3s, color .3s, border .3s;
     transition: color .3s, color .3s, border .3s

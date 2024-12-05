@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./herosection.scss"
 import { IoSearch } from "react-icons/io5";
 import { categories } from "../../../data";
 import BrandsSection from "../../Common/Brands";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
     const subtitleClass = `text-secondary text-xs md:text-lg`;
     const titleClass = `mb-2 text-white text-[24px] font-semibold leading-[32px] md:text-[64px] md:leading-[68px]`;
-
+    const [search, setSearch] = useState('');
+    const navigate = useNavigate();
+    
+    const handleSearch = () => {
+      if(search) {
+        navigate(`/gigs?search=${search}`);
+      }
+    }
+  
     return (
         <section className="main__heading heading">
             <div className="custom-container">
@@ -18,17 +27,18 @@ const HeroSection = () => {
                                 Find the perfect <span className="text-primary">freelance</span> services <br className="hidden lg:inline-block" />for your business
                             </h2>
                         </div>
-                        <form className="filters-panel__form filters-panel-form" action="#">
+                        <div className="filters-panel__form filters-panel-form">
                             <div className="w-34 relative">
-                                <IoSearch className="absolute top-[50%] right-3 -translate-y-1/2 text-white bg-transparent border-none w-[37px] h-[37px]" />
-                                <input className="bg-transparent border rounded-theme-r-small h-full w-full p-5 pr-12 text-white" type="text" placeholder="Search for any service..." />
+                                <IoSearch onClick={handleSearch} className="absolute top-[50%] right-3 -translate-y-1/2 text-white bg-transparent border-none w-[37px] h-[37px]" />
+                                <input className="bg-transparent border rounded-theme-r-small h-full w-full p-5 pr-12 text-white" 
+                                    onChange={(({ target: { value } }) => setSearch(value))} type="search" placeholder="Search for any service..." />
                             </div>
-                        </form>
+                        </div>
                         <div className="flex gap-4 items-center flex-wrap mt-2"> <span className="text-white font-medium">Popular:</span>
                             {categories.map(item => (
                                 <button
                                     type="button"
-                                    className="p-3 rounded-theme-r-small text-sm !bg-transparent text-white transition-all duration-600 
+                                    className="p-3 min-h-[20px] leading-[14px] rounded-[5px] text-sm !bg-transparent text-white transition-all duration-600 
                                             ease-in-out border-slate-500 border hover:!bg-secondary 
                                             hover:border-secondary">{item}</button>
                             ))}
