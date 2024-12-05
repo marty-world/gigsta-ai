@@ -55,7 +55,7 @@ const Gigs = () => {
         <div className='flex gap-2 justify-center h-full'>
           <input ref={minRef} type="number" placeholder='min' />
           <input ref={maxRef} type="number" placeholder='max' />
-          <button className='btn-primary px-4 rounded-lg' onClick={handlePriceFilter}>Apply</button>
+          <button className='btn-primary px-6 rounded-lg' onClick={handlePriceFilter}>Apply</button>
         </div>
         <div className='h-full'>
           <div className='flex gap-2 items-center justify-end'>

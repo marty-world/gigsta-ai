@@ -1,9 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from 'swiper/modules';
+
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/autoplay";
 
 import "./customswiper.scss";
 
@@ -42,9 +44,14 @@ const CustomSwiper = () => {
     return (
         <div style={{ position: "relative" }}>
             <Swiper
-                modules={[Navigation]}
+                modules={[Navigation, Autoplay]}
                 navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
+                autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: false,
+                }}
                 spaceBetween={30}
+                loop={true}
                 slidesPerView={4}
                 breakpoints={{
                     320: {

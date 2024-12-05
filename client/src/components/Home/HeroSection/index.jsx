@@ -3,7 +3,13 @@ import "./herosection.scss"
 import { IoSearch } from "react-icons/io5";
 import { categories } from "../../../data";
 import BrandsSection from "../../Common/Brands";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+
+const popularServices = [
+  { to: "/gigs?search=logo", label: "Design Logo" },
+  { to: "/gigs?search=eCommerce%20website", label: "eCommerce website" },
+  { to: "/gigs?search=branding", label: "Branding" },
+];
 
 const HeroSection = () => {
     const subtitleClass = `text-secondary text-xs md:text-lg`;
@@ -35,13 +41,16 @@ const HeroSection = () => {
                             </div>
                         </div>
                         <div className="flex gap-4 items-center flex-wrap mt-2"> <span className="text-white font-medium">Popular:</span>
-                            {categories.map(item => (
-                                <button
-                                    type="button"
-                                    className="p-3 min-h-[20px] leading-[14px] rounded-[5px] text-sm !bg-transparent text-white transition-all duration-600 
-                                            ease-in-out border-slate-500 border hover:!bg-secondary 
-                                            hover:border-secondary">{item}</button>
-                            ))}
+                            {popularServices.map((service, index) => (
+        <Link
+          key={index}
+          to={service.to}
+          className="p-3 min-h-[20px] leading-[14px] rounded-[5px] text-sm !bg-transparent text-white transition-all duration-600 
+                     ease-in-out border-slate-500 border hover:!bg-secondary hover:border-secondary"
+        >
+          {service.label}
+        </Link>
+      ))}
                         </div>
                         {/* <a className="px-6 py-4 flex justify-center items-center text-center text-white text-[14px] font-semibold leading-[20px] rounded-[10px] bg-primary transition-all duration-300 hover:bg-secondary" href="/">
                                 Build your business
