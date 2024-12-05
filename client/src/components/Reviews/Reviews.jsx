@@ -53,8 +53,8 @@ const Reviews = (props) => {
     }
 
     return (
-        <div className="reviews">
-            <h2>Reviews</h2>
+        <>
+            <h2 className='text-5xl font-semibold'>Reviews</h2>
             {
                 isLoading
                     ? <div className='loader'><Loader size={35} /></div>
@@ -75,7 +75,7 @@ const Reviews = (props) => {
                     <button>Send</button>
                 </form>
             </div>
-        </div>
+        </>
     )
 }
 
