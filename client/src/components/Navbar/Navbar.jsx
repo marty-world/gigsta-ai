@@ -99,20 +99,20 @@ const Navbar = () => {
 
   return (
     <nav className={showMenu || pathname !== "/" ? "navbar active" : "navbar"}>
-      <div className="container">
+      <div className="container flex items-center justify-between p-[15px]">
         <div className="logo flex items-center justify-center">
           <Link to="/" className="link">
-            <img src="/media/gigsta.png" alt="gigsta logo" className="max-w-20 md:max-w-24 lg:max-w-40" />
+            <img src="/media/gigsta.png" alt="gigsta logo" className="max-w-24 sm:max-w-28 md:max-w-28 lg:max-w-40" />
           </Link>
         </div>
 
-        <div className="links">
+        <div className="links !gap-6">
           <div className="menu-links">
             <Link to="/gigs?search=">Explore</Link>
             {!user?.isSeller && <Link to="/">Become a Seller</Link>}
           </div>
           {isLoading ? (
-            <Loader size={35} />
+            <Loader size={25} />
           ) : (
             <>
               {!user && (
@@ -121,7 +121,7 @@ const Navbar = () => {
                 </Link>
               )}
               {!user && (
-                <Link to="/register" className="btn-primary">
+                <Link to="/register" className="btn-primary !px-6 !py-2 md:!px-[25px] md:!py-[16px] !min-w-4 md:!min-w-24 lg:!min-w-32 !min-h-auto md:!min-h-12">
                   Join
                 </Link>
               )}

@@ -1,6 +1,8 @@
+import { FaSpinner } from "react-icons/fa6";
+
 const Loader = ({ size }) => {
   return (
-    <img width={size} height={size} src='/media/loader.svg' alt='loader' />
+    <FaSpinner className="animate-spin" size={size} />
   );
 };
 
