@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const BrandsSection = () => {
     return (
-        <div className="theme-section container mx-auto !pt-0">
+        <div className="custom-container">
             <Swiper
                 spaceBetween={30}
                 slidesPerView={6}
@@ -36,7 +36,7 @@ const BrandsSection = () => {
                     { brand: "https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/paypal2x.22728be.png" },
                     { brand: "https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/pandg2x.6dc32e4.png" },
                     { brand: "https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/netflix2x.887e47e.png" },
-                ].map((item) => <SwiperSlide style={{ textAlign: "center", padding: "15px" }}>
+                ].map((item, index) => <SwiperSlide key={index} style={{ textAlign: "center", padding: "5px 15px" }}>
                     <div className="overflow-hidden w-max mx-auto">
                         <img className="w-full object-contain h-16" src={item.brand} alt="img" />
                     </div>

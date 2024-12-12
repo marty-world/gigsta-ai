@@ -22,11 +22,10 @@ const styles = {
         background: "transparent",
         border: "1px solid #fff",
         color: "#fff",
-        padding: "10px",
         textAlign: "center",
         width: "50px",
         height: "50px",
-        display: "grid",
+        display: "flex",
         alignItems: "center",
         justifyCenter: "center",
         borderRadius: "10px",
@@ -91,16 +90,16 @@ const CustomSwiper = () => {
                 </SwiperSlide>)}
             </Swiper>
             <div
-                className="custom-prev"
+                className="custom-prev !w-8 !h-8 !right-10 md:!right-16 !-top-14 justify-center !md:-top-20 md:!w-[50px] md:!h-[50px]"
                 style={{ ...styles.arrow, ...styles.leftArrow }}
             >
-                <FaAngleLeft className="text-stone-500 bg-transparent border-none" />
+                <FaAngleLeft className="text-stone-500 p-2 md:p-1 lg:p-0 bg-transparent border-none" />
             </div>
             <div
-                className="custom-next"
+                className="custom-next !w-8 !h-8 !-top-14 !md:-top-20 justify-center md:!w-[50px] md:!h-[50px]"
                 style={{ ...styles.arrow, ...styles.rightArrow }}
             >
-                <FaAngleRight className="text-white bg-transparent border-none" />
+                <FaAngleRight className="text-white p-2 md:p-1 lg:p-0 bg-transparent border-none" />
             </div>
         </div>
     );
