@@ -6,19 +6,20 @@ const Review = (props) => {
   const country = getCountryFlag(review?.userID?.country);
 
   return (
-  <div className="review">
-      <div className="user">
+    <div className="review py-4 m-0 border-t">
+      <div className="user flex items-center gap-2">
         <img
           className="pp"
           src={review.userID?.image || '/media/noavatar.png'}
           alt=""
         />
-        <div className="info">
-          <span>{review?.userID?.username}</span>
-          <div className="country">
+        <div className="flex flex-col">
+          <span className='pb-2'>{review?.userID?.username}</span>
+          <div className="flex items-center gap-2">
             <img
               src={country?.normal}
               alt=""
+              className='w-6 h-6'
             />
             <span>{review?.userID?.country}</span>
           </div>

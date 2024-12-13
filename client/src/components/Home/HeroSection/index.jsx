@@ -27,7 +27,7 @@ const HeroSection = () => {
         <section className="main__heading heading">
             <div className="custom-container">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 items-center theme-section">
-                    <div className="flex flex-col items-start gap-6 order-2 md:order-1">
+                    <div className="flex flex-col items-start gap-6">
                         <div>
                             <h2 className={titleClass}>
                                 Find the perfect <span className="text-primary">freelance</span> services <br className="hidden xl:inline-block" />for your business
@@ -57,7 +57,7 @@ const HeroSection = () => {
                             Build your business
                         </a> */}
                     </div>
-                    <div className="relative w-full h-full flex justify-center items-center order-1 md:order-2">
+                    <div className="relative w-full h-full flex justify-center items-center">
                         <div className="relative max-w-[300px] min-w-full lg:min-w-[300px] xl:top-4 xl:-left-10 flex flex-col 
                             justify-center items-center w-max p-6 md:p-8 rounded-theme-r-small md:rounded-theme-p-r bg-primary2 z-[1] animate-[smallToDownAnimation_6s_infinite]">
                             <p className="text-black text-[16px] md:text-[20px] font-semibold leading-[20px] mb-4">
