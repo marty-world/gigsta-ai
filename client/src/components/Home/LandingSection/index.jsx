@@ -11,7 +11,7 @@ const LandingSection = () => {
                         <p className="text-secondary text-xs sm:text-sm md:text-md mb-2 font-medium">
                             Explore your business
                         </p>
-                        <h1 className="section-top-content__title title">
+                        <h1 className="mb-2 text-white text-[28px] font-semibold leading-[32px] md:text-[36px] md:leading-[40px] lg:text-[48px] lg:leading-[52px] xl:text-[64px] xl:leading-[68px]">
                             A whole world of freelance talent at your fingertips
                         </h1>
                         <ul className="section-top-content__list card-list">
@@ -43,7 +43,7 @@ const LandingSection = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="section-top__img flex items-center justify-center order-1 md:order-2">
+                    <div className="flex items-center justify-center order-1 md:order-2">
                         <video className="w-full rounded-theme-r-small" poster='https://fiverr-res.cloudinary.com/q_auto,f_auto,w_800,dpr_1.0/v1/attachments/generic_asset/asset/089e3bb9352f90802ad07ad9f6a4a450-1599517407052/selling-proposition-still-1400-x1.png' src="./media/video.mp4" controls></video>
                     </div>
                 </div>

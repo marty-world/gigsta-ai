@@ -53,7 +53,7 @@ const CustomSwiper = () => {
                 loop={true}
                 slidesPerView={4}
                 breakpoints={{
-                    320: {
+                    280: {
                         slidesPerView: 1,
                         spaceBetween: 10,
                     },
