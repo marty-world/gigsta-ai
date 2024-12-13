@@ -64,15 +64,15 @@ const Login = () => {
   }
 
   return (
-    <div className='login'>
-      <form action="" onSubmit={handleFormSubmit}>
-        <h2 className="text-4xl text-white font-[600]">
+    <div className='container theme-section mx-auto !px-[15px] w-full max-w-[400px]'>
+      <form action="" className='flex flex-col gap-4 justify-between' onSubmit={handleFormSubmit}>
+        <h2 className="text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-white font-[600]">
           Sign In
         </h2>
         <input name='username' placeholder='johndoe' onChange={handleFormInput} />
         <input name='password' type='password' placeholder='password' onChange={handleFormInput} />
-        <div className="section-top-content__buttons">
-          <button disabled={loading} type='submit' className="section-top-content__buttons-link section-top-content__buttons-link--green w-full">
+        <div className="">
+          <button disabled={loading} type='submit' className="w-full">
             { loading ? 'Loading' : 'Login' }
           </button>
         </div>
