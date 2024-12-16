@@ -72,7 +72,7 @@ const Register = () => {
           </button>
         </div>
         <div className="flex flex-col justify-between gap-2">
-          <p className='text-white hidden md:block'>Already have an account? <Link to='/login' className='text-secondary mx-4 font-[500] text-[#ad6ca5] underline'>Signin</Link></p>
+          <p className='text-white hidden md:block'>Already have an account? <Link to='/login' className='text-secondary mx-4 font-[500] text-[#ff66c4] underline'>Signin</Link></p>
           <h2 className="text-2xl md:text-2xl lg:text-4xl text-white font-[600]">I want to become a seller</h2>
           <div className="toggle mb-0">
             <label htmlFor="isSeller" className='text-md md:text-lg !text-white'>Activate the seller account</label>
@@ -87,7 +87,7 @@ const Register = () => {
           <button disabled={loading} type='submit' className="w-full md:hidden">
             { loading ? 'Loading...' : 'Register' }
           </button>
-          <p className='text-white text-right md:hidden'>Already have an account? <Link to='/login' className='text-secondary mx-4 font-[500] text-[#ad6ca5] underline'>Signin</Link></p>
+          <p className='text-white text-right md:hidden'>Already have an account? <Link to='/login' className='text-secondary mx-4 font-[500] text-[#ff66c4] underline'>Signin</Link></p>
         </div>
       </form>
     </div>
