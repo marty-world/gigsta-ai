@@ -30,7 +30,7 @@ const HeroSection = () => {
                     <div className="flex flex-col items-start gap-6">
                         <div>
                             <h2 className={titleClass}>
-                                Boss moves, no excuses <br className="hidden xl:inline-block" />Get your <span className="text-secondary">gigs handled</span> by talent that’s as real as you are.
+                                Boss moves, no excuses, <br className="hidden xl:inline-block" />Get your <span className="text-secondary">gigs handled</span> by talent that’s as real as you are.
                                 {/* Find the perfect <span className="text-primary">freelance</span> services <br className="hidden xl:inline-block" />for your business */}
                             </h2>
                         </div>
