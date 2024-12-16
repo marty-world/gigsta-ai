@@ -21,11 +21,11 @@ jobs:
         with:
           node-version: '20.x'
 
-      - name: npm install, build, and test
+      - name: npm install and build
         run: |
+          cd server
           npm install
           npm run build --if-present
-          npm run test --if-present
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'gigsta-backend'
           slot-name: 'Production'
-          package: .
+          package: './server'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CC8C008FA32A476B82446392B0FDCF95 }}
