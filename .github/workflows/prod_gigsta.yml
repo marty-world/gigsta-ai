@@ -23,11 +23,9 @@ jobs:
 
       - name: npm install and build
         run: |
-            cd server
-            npm install
-            npm run build --if-present
-            cp package.json ./dist/
-            cp -r node_modules ./dist/
+          cd server
+          npm install
+          npm run build --if-present
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
@@ -60,5 +58,5 @@ jobs:
         with:
           app-name: 'gigsta'
           slot-name: 'Production'
-          package: './server/dist'
+          package: './server'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F7AD71D2A94E44BEAE3C4CF70232AFBE }}
