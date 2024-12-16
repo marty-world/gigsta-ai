@@ -48,34 +48,6 @@ export const cards = [
     img: "https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741668/seo-2x.png",
     slug: 'seo'
   }
-  // {
-  //   id: 8,
-  //   title: "Illustration",
-  //   desc: "Color you dreams",
-  //   img: "https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/illustration-2x.png",
-  //   slug: 'illustration'
-  // },
-  // {
-  //   id: 9,
-  //   title: "Translation",
-  //   desc: "Go global",
-  //   img: "https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741674/translation-2x.png",
-  //   slug: 'translation'
-  // },
-  // {
-  //   id: 10,
-  //   title: "Book Covers",
-  //   desc: "Showcase your story",
-  //   img: "https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/book-covers-2x.png",
-  //   slug: 'books'
-  // },
-  // {
-  //   id: 11,
-  //   title: "Data Entry",
-  //   desc: "Learn your business",
-  //   img: "https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/data-entry-2x.png",
-  //   slug: 'writing'
-  // },
 ];
 
 export const projects = [
