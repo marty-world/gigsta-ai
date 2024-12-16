@@ -1,18 +1,4 @@
 export const cards = [
-  // {
-  //   id: 5,
-  //   title: "Video Explainer",
-  //   desc: "Engage your audience",
-  //   img: "https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741663/animated-explainer-2x.png",
-  //   slug: 'video'
-  // },
-  // {
-  //   id: 6,
-  //   title: "Social Media",
-  //   desc: "Reach more customers",
-  //   img: "https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741667/social-2x.png",
-  //   slug: 'social'
-  // },
   {
     id: 1,
     title: "Web Development",
