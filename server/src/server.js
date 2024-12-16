@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(compression());
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:4173', 'https://gigsta-backend-edghckg6f7eab3hq.centralus-01.azurewebsites.net'],
+    origin: ['http://localhost:5173', 'http://localhost:4173', 'https://gigsta-backend-edghckg6f7eab3hq.centralus-01.azurewebsites.net/', 'https://gigsta.ai/'],
     credentials: true
 }));
 
