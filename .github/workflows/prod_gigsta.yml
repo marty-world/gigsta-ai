@@ -59,4 +59,4 @@ jobs:
           app-name: 'gigsta'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1F9BFA0ED4294C45B3F91DEC0606AF30 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F7AD71D2A94E44BEAE3C4CF70232AFBE }}
