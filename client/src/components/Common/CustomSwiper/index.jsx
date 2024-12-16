@@ -75,9 +75,9 @@ const CustomSwiper = () => {
                     <div className="h-full">
                         <div className="card__inner items-start gap-4">
                             <div className="flex items-start flex-col gap-2">
-                                <p className="bg-primary p-2 text-xs rounded-theme-r-xs text-white py-1">
+                                {/* <p className="bg-primary p-2 text-xs rounded-theme-r-xs text-white py-1">
                                     {item.desc}
-                                </p>
+                                </p> */}
                                 <Link className="text-white text-3xl text-left font-semibold font-Display hover:text-primary2" to={`/gigs?category=${item.slug}`}>
                                     {item.title}
                                 </Link>

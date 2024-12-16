@@ -30,7 +30,8 @@ const HeroSection = () => {
                     <div className="flex flex-col items-start gap-6">
                         <div>
                             <h2 className={titleClass}>
-                                Find the perfect <span className="text-primary">freelance</span> services <br className="hidden xl:inline-block" />for your business
+                                Boss moves, no excuses <br className="hidden xl:inline-block" />Get your <span className="text-secondary">gigs handled</span> by talent that’s as real as you are.
+                                {/* Find the perfect <span className="text-primary">freelance</span> services <br className="hidden xl:inline-block" />for your business */}
                             </h2>
                         </div>
                         <div className="w-full">
@@ -61,16 +62,17 @@ const HeroSection = () => {
                         <div className="relative max-w-[300px] min-w-full lg:min-w-[300px] xl:top-4 xl:-left-10 flex flex-col 
                             justify-center items-center w-max p-6 md:p-8 rounded-theme-r-small md:rounded-theme-p-r bg-primary2 z-[1] animate-[smallToDownAnimation_6s_infinite]">
                             <p className="text-black text-[16px] md:text-[20px] font-semibold leading-[20px] mb-4">
-                                Fresh look at <br className="hidden md:inline-block" />familiar elements <br className="hidden md:inline-block" />
+                                "Local Talent, Global Impact" <br className="hidden md:inline-block" />Connecting businesses with culturally aware, community-rooted gig workers.
+                                {/* Fresh look at <br className="hidden md:inline-block" />familiar elements <br className="hidden md:inline-block" />
                                 is sure to create <br className="hidden md:inline-block" />a great experience <br className="hidden md:inline-block" />
-                                that members of<br className="hidden md:inline-block" /> your community <br className="hidden md:inline-block" />will love.
+                                that members of<br className="hidden md:inline-block" /> your community <br className="hidden md:inline-block" />will love. */}
                             </p>
                             <div className="elevate-view__box-subtext_img obsolute object-cover rounded-theme-p-r"><img src="assets/index/communication.png" alt="communication" /></div>
                         </div>
-                        <img className="hidden xl:block absolute left-[237px] top-[-15px] w-[120px] rounded-full object-cover animate-[toUpAnimation_3s_infinite]" src="assets/index/v1.png" alt="index 1" />
-                        <img className="hidden xl:block absolute right-[101px] top-[08px] w-[166px] rounded-full object-cover animate-[smallToDownAnimation_4s_infinite]" src="assets/index/v2.png" alt="index 2" />
-                        <img className="hidden xl:block absolute left-[0px] top-[80%] w-[166px] rounded-full object-cover animate-[toRightAnimation_3s_infinite]" src="assets/index/v3.png" alt="index 3" />
-                        <img className="hidden xl:block absolute left-[267px] bottom-[-25%] w-[100px] rounded-full object-cover animate-[smallToDownAnimation_4s_infinite]" src="assets/index/v4.png" alt="index 4" />
+                        <img className="hidden xl:block absolute left-[237px] top-[-15px] w-[120px] rounded-full object-cover animate-[toUpAnimation_3s_infinite]" src="assets/index/v1.webp" alt="index 1" />
+                        <img className="hidden xl:block absolute right-[101px] top-[08px] w-[166px] rounded-full object-cover animate-[smallToDownAnimation_4s_infinite]" src="assets/index/v2.webp" alt="index 2" />
+                        <img className="hidden xl:block absolute left-[50px] top-[75%] w-[166px] rounded-full object-cover animate-[toRightAnimation_3s_infinite]" src="assets/index/v3.png" alt="index 3" />
+                        <img className="hidden xl:block absolute left-[267px] bottom-[-15%] w-[130px] rounded-full object-cover animate-[smallToDownAnimation_4s_infinite]" src="assets/index/v4.png" alt="index 4" />
                         <img className="hidden xl:block absolute left-[70px] top-[27px] w-[100px] rounded-full object-cover animate-[toLeftAnimation_4s_infinite]" src="assets/index/m1.png" alt="index 5" />
                         <img className="hidden xl:block absolute left-[24px] top-[43%] w-[100px] rounded-full object-cover animate-[toRightAnimation_3s_infinite]" src="assets/index/m2.png" alt="index 6" />
                         <img className="hidden xl:block absolute right-[200px] top-[93%] w-[100px] rounded-full object-cover animate-[toLeftAnimation_4s_infinite]" src="assets/index/m3.png" alt="index 7" />
