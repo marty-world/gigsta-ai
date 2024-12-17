@@ -13,7 +13,7 @@ const popularServices = [
 
 const HeroSection = () => {
     const subtitleClass = `text-secondary text-xs md:text-lg`;
-    const titleClass = `mb-2 text-white text-[28px] font-semibold leading-[32px] md:text-[36px] md:leading-[40px] lg:text-[48px] lg:leading-[52px] xl:text-[64px] xl:leading-[68px]`;
+    const titleClass = `mb-2 text-white text-[34px] font-semibold leading-[44px] md:text-[32px] md:leading-[40px] lg:text-[40px] lg:leading-[48px] xl:text-[52px] xl:leading-[60px]`;
     const [search, setSearch] = useState('');
     const navigate = useNavigate();
 
@@ -31,7 +31,6 @@ const HeroSection = () => {
                         <div>
                             <h2 className={titleClass}>
                                 Boss moves, no excuses, <br className="hidden xl:inline-block" />Get your <span className="text-secondary">gigs handled</span> by talent that’s as real as you are.
-                                {/* Find the perfect <span className="text-primary">freelance</span> services <br className="hidden xl:inline-block" />for your business */}
                             </h2>
                         </div>
                         <div className="w-full">

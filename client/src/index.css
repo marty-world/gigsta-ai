@@ -290,3 +290,12 @@ button:disabled {
     margin-bottom: 30px;
     font-size: 32px;
  }
+
+
+@media(max-width: 767px) {
+
+     .swiper-slide {
+        border-radius: 15px;
+    }
+}
+    

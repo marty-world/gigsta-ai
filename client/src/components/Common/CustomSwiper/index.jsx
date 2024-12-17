@@ -51,7 +51,7 @@ const CustomSwiper = () => {
                 }}
                 spaceBetween={30}
                 loop={true}
-                slidesPerView={4}
+                slidesPerView={3}
                 breakpoints={{
                     280: {
                         slidesPerView: 1,
@@ -62,11 +62,11 @@ const CustomSwiper = () => {
                         spaceBetween: 15,
                     },
                     1024: {
-                        slidesPerView: 3,
+                        slidesPerView: 2,
                         spaceBetween: 20,
                     },
                     1280: {
-                        slidesPerView: 4,
+                        slidesPerView: 3,
                         spaceBetween: 30,
                     }
                 }}
@@ -75,10 +75,7 @@ const CustomSwiper = () => {
                     <div className="h-full">
                         <div className="card__inner items-start gap-4">
                             <div className="flex items-start flex-col gap-2">
-                                {/* <p className="bg-primary p-2 text-xs rounded-theme-r-xs text-white py-1">
-                                    {item.desc}
-                                </p> */}
-                                <Link className="text-white text-3xl text-left font-semibold font-Display hover:text-primary2" to={`/gigs?category=${item.slug}`}>
+                                <Link className="text-white text-[28px] mb-[15px] text-left font-[500] font-Display hover:text-primary2" to={`/gigs?category=${item.slug}`}>
                                     {item.title}
                                 </Link>
                             </div>

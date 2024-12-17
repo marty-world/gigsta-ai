@@ -182,14 +182,6 @@ $color_3: #fff;
         line-height: calc(34px + 30 * ((100vw - 375px) / 835));
         margin-bottom: calc(10px + 10 * ((100vw - 375px) / 835));
     }
-
-    .section-top-content__buttons-link {
-        font-size: calc(12px + 2 * ((100vw - 375px) / 835));
-        padding-top: calc(12px + 2 * ((100vw - 375px) / 835));
-        padding-right: calc(12px + 12 * ((100vw - 375px) / 835));
-        padding-bottom: calc(12px + 2 * ((100vw - 375px) / 835));
-        padding-left: calc(12px + 12 * ((100vw - 375px) / 835));
-    }
 }
 
 
@@ -255,17 +247,5 @@ $color_3: #fff;
     text-edge: cap;
     font-size: 16px;
     line-height: 20px;
-    font-weight: 500
-}
-
-@media(max-width: 1210px) {
-    .card-list__text {
-        font-size: calc(12px + 2 * ((100vw - 375px) / 835))
-    }
-}
-
-@media(max-width: 1210px) {
-    .card-list__text {
-        line-height: calc(16px + 4 * ((100vw - 375px) / 835))
-    }
+    font-weight: 400
 }
