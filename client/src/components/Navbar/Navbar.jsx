@@ -109,7 +109,7 @@ const Navbar = () => {
         <div className="links !gap-6">
           <div className="menu-links">
             <Link to="/gigs?search=">Explore</Link>
-            {!user?.isSeller && <Link to="/">About</Link>}
+            {!user?.isSeller && <Link to="/">Become a Seller</Link>}
           </div>
           {isLoading ? (
             <Loader size={25} />
