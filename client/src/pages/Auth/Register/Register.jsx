@@ -73,14 +73,14 @@ const Register = () => {
         </div>
         <div className="flex flex-col justify-between gap-2">
           <p className='text-white hidden md:block'>Already have an account? <Link to='/login' className='text-secondary mx-4 font-[500] text-[#ff66c4] underline'>Signin</Link></p>
-          {/* <h2 className="text-2xl md:text-2xl lg:text-4xl text-white font-[600]">I want to become a seller</h2> */}
-          {/* <div className="toggle mb-0">
+          <h2 className="text-2xl md:text-2xl lg:text-4xl text-white font-[600]">I want to become a seller</h2>
+          <div className="toggle mb-0">
             <label htmlFor="isSeller" className='text-md md:text-lg !text-white'>Activate the seller account</label>
             <label className="switch">
               <input type="checkbox" name='isSeller' onChange={handleChange} />
               <span className="slider round"></span>
             </label>
-          </div> */}
+          </div>
           <input name="phone" type="text" className='focus:outline-white' placeholder="+1 (516) 123-9879*" onChange={handleChange} />
           <textarea placeholder="A short description of yourself*" className='focus:outline-white' name="description" id="description"
             cols="30" rows="10" onChange={handleChange}></textarea>
