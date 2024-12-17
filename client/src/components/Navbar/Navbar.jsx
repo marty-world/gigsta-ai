@@ -120,11 +120,11 @@ const Navbar = () => {
                   Sign in
                 </Link>
               )}
-              {/* {!user && (
+              {!user && (
                 <Link to="/register" className="btn-primary !px-6 !py-2 md:!px-[25px] md:!py-[16px] !min-w-4 md:!min-w-24 lg:!min-w-32 !min-h-auto md:!min-h-12">
                   Join
                 </Link>
-              )} */}
+              )}
               {user && (
                 <div className="user" onClick={() => setShowPanel(!showPanel)}>
                   <img src={user.image || "/media/noavatar.png"} />
