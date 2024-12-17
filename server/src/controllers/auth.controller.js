@@ -7,7 +7,7 @@ const { JWT_SECRET, NODE_ENV } = process.env;
 const saltRounds = 10;
 
 const authRegister = async (request, response) => {
-    const { username, email, phone, password, image, description } = request.body;
+    const { username, email, phone, password, image, isSeller, description } = request.body;
 
     try {
         const hash = bcrypt.hashSync(password, saltRounds);
@@ -17,6 +17,7 @@ const authRegister = async (request, response) => {
             password: hash,
             image,
             description,
+            isSeller,
             phone
         });
         await user.save();
