@@ -1,9 +1,9 @@
 .footer {
     display: flex;
     justify-content: center;
-    color: #999;
-    margin: 50px 0;
-
+    color: #ffffff;
+    margin: 50px 0 0;
+    background: #14181e;
     img {
         width: 24px;
         height: 24px;
@@ -20,14 +20,15 @@
             padding: 50px 0;
 
             .item {
-                width: 180px;
+                width: 280px;
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
 
                 h1 {
-                    font-size: 16px;
-                    color: #404145;;
+                    font-size: 22px;
+                    font-weight: 500;
+                    color: #ffffff;;
                 }
 
                 span {
@@ -57,7 +58,9 @@
                 display: flex;
                 align-items: center;
                 gap: 20px;
-                
+                h2 {
+                    color: var(--white-color);
+                }
                 span {
                     font-size: 13px;
                 }

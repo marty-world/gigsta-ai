@@ -99,40 +99,31 @@ const Navbar = () => {
 
   return (
     <nav className={showMenu || pathname !== "/" ? "navbar active" : "navbar"}>
-      <div className="container">
-        <div className="logo">
+      <div className="container flex items-center justify-between p-[15px]">
+        <div className="logo flex items-center justify-center">
           <Link to="/" className="link">
-            <span className="text">fiverr</span>
+            <img src="/media/gigsta.png" alt="gigsta logo" className="max-w-24 sm:max-w-28 md:max-w-28 lg:max-w-40" />
           </Link>
-          <span className="dot">.</span>
         </div>
 
-        <div className="links">
+        <div className="links !gap-6">
           <div className="menu-links">
-            <span>Fiverr Business</span>
-            <span>Explore</span>
-            <span>English</span>
-            {!user?.isSeller && <span>Become a Seller</span>}
+            <Link to="/gigs?search=">Explore</Link>
+            {!user?.isSeller && <Link to="/">About</Link>}
           </div>
           {isLoading ? (
-            <Loader size={35} />
+            <Loader size={25} />
           ) : (
             <>
               {!user && (
-                <span>
-                  <Link to="/login" className="link">
-                    Sign in
-                  </Link>
-                </span>
+                <Link to="/login">
+                  Sign in
+                </Link>
               )}
               {!user && (
-                <button
-                  className={showMenu || pathname !== "/" ? "join-active" : ""}
-                >
-                  <Link to="/register" className="link">
-                    Join
-                  </Link>
-                </button>
+                <Link to="/register" className="btn-primary !px-6 !py-2 md:!px-[25px] md:!py-[16px] !min-w-4 md:!min-w-24 lg:!min-w-32 !min-h-auto md:!min-h-12">
+                  Join
+                </Link>
               )}
               {user && (
                 <div className="user" onClick={() => setShowPanel(!showPanel)}>
@@ -167,7 +158,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      {(showMenu || pathname !== "/") && (
+      {/* {(showMenu || pathname !== "/") && (
         <>
           <hr />
           <Slider className="menu" {...settings}>
@@ -180,7 +171,7 @@ const Navbar = () => {
             ))}
           </Slider>
         </>
-      )}
+      )} */}
     </nav>
   );
 };

@@ -53,29 +53,16 @@ const Reviews = (props) => {
     }
 
     return (
-        <div className="reviews">
-            <h2>Reviews</h2>
-            {
-                isLoading
-                    ? <div className='loader'><Loader size={35} /></div>
-                    : error
-                        ? 'Something went wrong!'
-                        : data.map((review) => <Review key={review._id} review={review} />)
-            }
-            <div className="add">
-                <form className='addForm' onSubmit={handleReviewSubmit}>
-                    <textarea cols="20" rows="10" placeholder='Write a review'></textarea>
-                    <select>
-                        <option value={1}>1</option>
-                        <option value={2}>2</option>
-                        <option value={3}>3</option>
-                        <option value={4}>4</option>
-                        <option value={5}>5</option>
-                    </select>
-                    <button>Send</button>
-                </form>
-            </div>
-        </div>
+        <>
+            <h2 className='text-2xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold'>Reviews</h2>
+            {isLoading
+                ? <div className='loader'><Loader size={35} /></div> : error ? 'Something went wrong!' : 
+                data.map((review) => <Review key={review._id} review={review} />)}
+            <form className='flex flex-col w-full gap-4 items-start' onSubmit={handleReviewSubmit}>
+                <textarea cols="20" rows="10" placeholder='Write a review'></textarea>
+                <button type='submit' className='btn-primary'>Send</button>
+            </form>
+        </>
     )
 }
 

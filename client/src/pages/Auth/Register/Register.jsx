@@ -59,60 +59,39 @@ const Register = () => {
   }
 
   return (
-    <div className="register">
-      <form onSubmit={handleSubmit}>
-        <div className="left">
-          <h1>Create a new account</h1>
-          <label htmlFor="">Username</label>
-          <input
-            name="username"
-            type="text"
-            placeholder="johndoe"
-            onChange={handleChange}
-          />
-          <label htmlFor="">Email</label>
-          <input
-            name="email"
-            type="email"
-            placeholder="email"
-            onChange={handleChange}
-          />
-          <label htmlFor="">Password</label>
-          <input name="password" type="password" onChange={handleChange} />
-          <label htmlFor="">Profile Picture</label>
-          <input type="file" onChange={(event) => setImage(event.target.files[0])} />
-          <button type="submit" disabled={loading}>{loading ? 'Loading...' : 'Register'}</button>
+    <div className="container mx-auto theme-section !px-[15px]">
+      <form onSubmit={handleSubmit} className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2'>
+        <div className="flex flex-col justify-between gap-2">
+          <h2 className="text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-white font-[600]">Create a new account</h2>
+          <input name="username" type="text" className='focus:outline-white' placeholder="johndoe*" onChange={handleChange} />
+          <input name="email" type="email" className='focus:outline-white' placeholder="Email*" onChange={handleChange} />
+          <input name="password" type="password" className='focus:outline-white' placeholder="**********" onChange={handleChange} />
+          <input type="file" className='focus:outline-white' onChange={(event) => setImage(event.target.files[0])} />
+          <button disabled={loading} type='submit' className="w-full hidden md:block">
+            { loading ? 'Loading...' : 'Register' }
+          </button>
         </div>
-        <div className="right">
-          <p>Already have an account? <Link to='/login'>Signin</Link></p>
-          <h1>I want to become a seller</h1>
-          <div className="toggle">
-            <label htmlFor="">Activate the seller account</label>
+        <div className="flex flex-col justify-between gap-2">
+          <p className='text-white hidden md:block'>Already have an account? <Link to='/login' className='text-secondary mx-4 font-[500] text-[#ff66c4] underline'>Signin</Link></p>
+          {/* <h2 className="text-2xl md:text-2xl lg:text-4xl text-white font-[600]">I want to become a seller</h2> */}
+          {/* <div className="toggle mb-0">
+            <label htmlFor="isSeller" className='text-md md:text-lg !text-white'>Activate the seller account</label>
             <label className="switch">
               <input type="checkbox" name='isSeller' onChange={handleChange} />
               <span className="slider round"></span>
             </label>
-          </div>
-          <label htmlFor="">Phone Number</label>
-          <input
-            name="phone"
-            type="text"
-            placeholder="+1 1234 567 890"
-            onChange={handleChange}
-          />
-          <label htmlFor="">Description</label>
-          <textarea
-            placeholder="A short description of yourself"
-            name="description"
-            id=""
-            cols="30"
-            rows="10"
-            onChange={handleChange}
-          ></textarea>
+          </div> */}
+          <input name="phone" type="text" className='focus:outline-white' placeholder="+1 (516) 123-9879*" onChange={handleChange} />
+          <textarea placeholder="A short description of yourself*" className='focus:outline-white' name="description" id="description"
+            cols="30" rows="10" onChange={handleChange}></textarea>
+          <button disabled={loading} type='submit' className="w-full md:hidden">
+            { loading ? 'Loading...' : 'Register' }
+          </button>
+          <p className='text-white text-right md:hidden'>Already have an account? <Link to='/login' className='text-secondary mx-4 font-[500] text-[#ff66c4] underline'>Signin</Link></p>
         </div>
       </form>
     </div>
   )
 }
 
-export default Register
+export default Register;
