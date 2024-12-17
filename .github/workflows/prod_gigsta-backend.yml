@@ -23,6 +23,7 @@ jobs:
 
       - name: npm install
         run: |
+          cd server
           npm install
 
       - name: Upload artifact for deployment job
@@ -51,4 +52,4 @@ jobs:
           app-name: 'gigsta-backend'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EBD000125807419FA3F735CB59165ED1 }}
-          package: ./server
+          package: .
