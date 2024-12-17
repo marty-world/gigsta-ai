@@ -15,7 +15,7 @@ const Message = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-  
+
   const { isLoading, error, data } = useQuery({
     queryKey: ['messages'],
     queryFn: () =>
@@ -27,10 +27,10 @@ const Message = () => {
           toast.error(response.data.message)
         })
   });
-  
+
   const queryClient = useQueryClient();
   const mutation = useMutation({
-    mutationFn: (message) => 
+    mutationFn: (message) =>
       axiosFetch.post('/messages', message)
     ,
     onSuccess: () =>
@@ -39,7 +39,7 @@ const Message = () => {
 
   const handleMessageSubmit = (event) => {
     event.preventDefault();
-    
+
     mutation.mutate({
       conversationID,
       description: event.target[0].value
@@ -49,37 +49,33 @@ const Message = () => {
   }
 
   return (
-    <div className="message">
-      <div className="container">
-        <span className="breadcrumbs">
-          <Link to="/messages" className="link">Messages</Link>
-        </span>
-        {
-          isLoading
+    <div className='theme-section'>
+      <div className="message">
+        <div className="custom-container">
+          <h1 className="text-[24px] sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white font-[600] mb-4">
+            <Link to="/messages" className="link">Messages</Link>
+          </h1>
+          {isLoading
             ? <div className="loader"> <Loader /> </div>
-            : error
-              ? 'Something went wrong'
-              : <div className="messages">
-                {
-                  data.map((message) => (
-                    <div className={message.userID._id === user._id ? 'owner item' : 'item'} key={message._id}>
-                      <img
-                        src={message.userID.image || '/media/noavatar.png'}
-                        alt=""
-                      />
-                      <p>
-                        {message.description}
-                      </p>
-                    </div>
-                  ))
-                }
-              </div>
-        }
-        <hr />
-        <form className="write" onSubmit={handleMessageSubmit}>
-          <textarea cols="30" rows="10" placeholder="Write a message"></textarea>
-          <button type='submit'>Send</button>
-        </form>
+            : error ? 'Something went wrong'
+              : <div className="messages flex flex-col gap-2 border rounded-theme-s-r rounded-theme-s-r mb-4 p-4">
+                {data.map((message) => (
+                  <div className={message.userID._id === user._id ? 'owner item flex gap-4 row-reverse' : 'item flex gap-4 row-reverse'} key={message._id}>
+                    <img
+                      src={message.userID.image || '/media/noavatar.png'}
+                      alt=""
+                    />
+                    <p>
+                      {message.description}
+                    </p>
+                  </div>
+                ))}
+              </div>}
+          <form className="flex items-start gap-4" onSubmit={handleMessageSubmit}>
+            <textarea cols="30" rows="5" placeholder="Write a message" className='w-full focus:outline-white focus:outline-1 rounded-theme-s-r'></textarea>
+            <button type='submit' className='btn-primary'>Send</button>
+          </form>
+        </div>
       </div>
     </div>
   );
