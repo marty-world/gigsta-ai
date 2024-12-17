@@ -6,7 +6,7 @@ const generateImageURL = async (image) => {
   file.append("upload_preset", import.meta.env.VITE_CLOUDINARY_PRESET);
 
   const { data } = await axios.post(
-    `https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLOUDINARY_ENV}/image/upload`,
+    `https://api.cloudinary.com/v1_1/dlel2uytz/image/upload`,
     file
   );
   return data;
