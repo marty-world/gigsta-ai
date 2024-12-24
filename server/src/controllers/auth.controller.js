@@ -62,6 +62,7 @@ const authLogin = async (request, response) => {
 
             const cookieConfig =  {
                 httpOnly: true,
+                sameSite: NODE_ENV === 'production' ? 'none' : 'lax',
                 secure: NODE_ENV === 'production',
                 maxAge: 60 * 60 * 24 * 7 * 1000, // 7 days
                 path: '/'
