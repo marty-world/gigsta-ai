@@ -55,11 +55,10 @@ const authLogin = async (request, response) => {
         if(match) {
             const { password, ...data } = user._doc;
 
-            const token = jwt.sign(
-                { _id: user._id, isSeller: user.isSeller },
-                JWT_SECRET,
-                { expiresIn: '7 days' }
-            );
+            const token = jwt.sign({
+                _id: user._id,
+                isSeller: user.isSeller
+            }, JWT_SECRET, { expiresIn: '7 days' });
 
             const cookieConfig =  {
                 httpOnly: true,
