@@ -61,13 +61,13 @@ const authLogin = async (request, response) => {
                 { expiresIn: '7 days' }
             );
 
-            const cookieConfig = {
+            const cookieConfig =  {
                 httpOnly: true,
-                secure: process.env.NODE_ENV === 'production', // Secure in production
-                sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
-                path: '/',
-                maxAge: 7 * 24 * 60 * 60 * 1000
-            };
+                sameSite: NODE_ENV === 'production' ? 'none' : 'strict',
+                secure: NODE_ENV === 'production',
+                maxAge: 60 * 60 * 24 * 7 * 1000, // 7 days
+                path: '/'
+            }
 
             return response.cookie('accessToken', token, cookieConfig)
             .status(202).send({
@@ -89,16 +89,14 @@ const authLogin = async (request, response) => {
 
 const authLogout = async (request, response) => {
     return response.clearCookie('accessToken', {
-        httpOnly: true,
-        secure: true,
         sameSite: 'none',
-        path: '/'
+        secure: true
     })
     .send({
         error: false,
         message: 'User have been logged out!'
     });
-};
+}
 
 const authStatus = async (request, response) => {
     try {
