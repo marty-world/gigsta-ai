@@ -55,17 +55,18 @@ const authLogin = async (request, response) => {
         if(match) {
             const { password, ...data } = user._doc;
 
-            const token = jwt.sign({
-                _id: user._id,
-                isSeller: user.isSeller
-            }, JWT_SECRET, { expiresIn: '7 days' });
+            const token = jwt.sign(
+                { _id: user._id, isSeller: user.isSeller },
+                JWT_SECRET,
+                { expiresIn: '7 days' }
+            );
 
             const cookieConfig = {
-                httpOnly: false,
-                secure: false,
-                sameSite: 'lax',
+                httpOnly: true,
+                secure: process.env.NODE_ENV === 'production', // Secure in production
+                sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
                 path: '/',
-                maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
+                maxAge: 7 * 24 * 60 * 60 * 1000
             };
 
             return response.cookie('accessToken', token, cookieConfig)
