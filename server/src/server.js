@@ -18,9 +18,26 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(compression());
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:4173', 'https://gigsta.ai', 'https://gigstafrontend.netlify.app'],
-    credentials: true
+    origin: [
+        'http://localhost:5173',
+        'https://localhost:5173',
+        'http://localhost:4173',
+        'https://localhost:4173',
+        'https://gigsta.ai',
+        'https://gigstafrontend.netlify.app'
+    ],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
+    exposedHeaders: ['set-cookie', 'Set-Cookie']
 }));
+
+// Add these before your routes
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Credentials', 'true');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+});
 
 // Other Routes
 app.use('/api/auth', authRoute);
