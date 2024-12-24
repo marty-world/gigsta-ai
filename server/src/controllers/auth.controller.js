@@ -60,13 +60,13 @@ const authLogin = async (request, response) => {
                 isSeller: user.isSeller
             }, JWT_SECRET, { expiresIn: '7 days' });
 
-            const cookieConfig =  {
+            const cookieConfig = {
                 httpOnly: true,
-                sameSite: NODE_ENV === 'production' ? 'none' : 'lax',
-                secure: NODE_ENV === 'production',
+                sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+                secure: process.env.NODE_ENV === 'production',
                 maxAge: 60 * 60 * 24 * 7 * 1000, // 7 days
                 path: '/'
-            }
+            };
 
             return response.cookie('accessToken', token, cookieConfig)
             .status(202).send({
