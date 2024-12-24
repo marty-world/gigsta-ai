@@ -10,7 +10,7 @@ const generateImageURL = async (image) => {
     file
   );
   const imageUrl = data.secure_url;
-  return data;
+  return imageUrl;
 };
 
 export default generateImageURL;
