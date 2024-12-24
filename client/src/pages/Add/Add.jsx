@@ -98,13 +98,13 @@ const Add = () => {
           <div className="left">
             <label htmlFor="">Title</label>
             <input name='title' type="text" placeholder="e.g. I will do something I'm really good at" onChange={handleFormCange} />
-
+            
             <label htmlFor="">Category</label>
             <select name="category" onChange={handleFormCange}>
               <option value=''>Category</option>
               {
                 cards.map((item) => (
-                  <option key={item.id} value={item.slug}>{item.slug[0].toUpperCase() + item.slug.slice(1)}</option>
+                  <option key={item.id} value={item.slug}>{item.title[0].toUpperCase() + item.title.slice(1)}</option>
                 ))
               }
             </select>
@@ -117,7 +117,7 @@ const Add = () => {
                 <label htmlFor="">Upload Images</label>
                 <input type="file" accept='image/*' multiple onChange={(event) => setGigImages(event.target.files)} />
               </div>
-              <button disabled={!!disabled} onClick={handleImageUploads}>{uploading ? 'uploading' : disabled ? 'Uploaded' : 'upload'}</button>
+              <button disabled={!!disabled} onClick={handleImageUploads}>{uploading ? 'Uploading' : disabled ? 'Uploaded' : 'Upload'}</button>
             </div>
 
             <label htmlFor="">Description</label>
@@ -155,7 +155,7 @@ const Add = () => {
               }
             </div>
             <label htmlFor="">Price</label>
-            <input name='price' type="number" min='1' onChange={handleFormCange} />
+            <input name='price' type="number" min='1' onChange={handleFormCange} className='w-[200px]'/>
           </div>
         </div>
       </div>

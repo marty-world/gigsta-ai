@@ -1,14 +1,301 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@1,600&display=swap');
+@font-face {
+    font-family: "Clash Grotesk";
+    src: url("fonts/ClashGrotesk-Variable.woff2") format("woff2"), url("fonts/ClashGrotesk-Variable.woff") format("woff"), url("fonts/ClashGrotesk-Variable.ttf") format("truetype");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Clash Grotesk";
+    src: url("fonts/ClashGrotesk-Extralight.woff2") format("woff2"), url("fonts/ClashGrotesk-Extralight.woff") format("woff"), url("fonts/ClashGrotesk-Extralight.ttf") format("truetype");
+    font-weight: 200;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Clash Grotesk";
+    src: url("fonts/ClashGrotesk-Light.woff2") format("woff2"), url("fonts/ClashGrotesk-Light.woff") format("woff"), url("fonts/ClashGrotesk-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Clash Grotesk";
+    src: url("fonts/ClashGrotesk-Regular.woff2") format("woff2"), url("fonts/ClashGrotesk-Regular.woff") format("woff"), url("fonts/ClashGrotesk-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Clash Grotesk";
+    src: url("fonts/ClashGrotesk-Medium.woff2") format("woff2"), url("fonts/ClashGrotesk-Medium.woff") format("woff"), url("fonts/ClashGrotesk-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Clash Grotesk";
+    src: url("fonts/ClashGrotesk-Semibold.woff2") format("woff2"), url("fonts/ClashGrotesk-Semibold.woff") format("woff"), url("fonts/ClashGrotesk-Semibold.ttf") format("truetype");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Clash Grotesk";
+    src: url("fonts/ClashGrotesk-Bold.woff2") format("woff2"), url("fonts/ClashGrotesk-Bold.woff") format("woff"), url("fonts/ClashGrotesk-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Clash Display";
+    src: url("fonts/ClashDisplay-Variable.woff2") format("woff2"), url("fonts/ClashDisplay-Variable.woff") format("woff"), url("fonts/ClashDisplay-Variable.ttf") format("truetype");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Clash Display";
+    src: url("fonts/ClashDisplay-Extralight.woff2") format("woff2"), url("fonts/ClashDisplay-Extralight.woff") format("woff"), url("fonts/ClashDisplay-Extralight.ttf") format("truetype");
+    font-weight: 200;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Clash Display";
+    src: url("fonts/ClashDisplay-Light.woff2") format("woff2"), url("fonts/ClashDisplay-Light.woff") format("woff"), url("fonts/ClashDisplay-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Clash Display";
+    src: url("fonts/ClashDisplay-Regular.woff2") format("woff2"), url("fonts/ClashDisplay-Regular.woff") format("woff"), url("fonts/ClashDisplay-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Clash Display";
+    src: url("fonts/ClashDisplay-Medium.woff2") format("woff2"), url("fonts/ClashDisplay-Medium.woff") format("woff"), url("fonts/ClashDisplay-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Clash Display";
+    src: url("fonts/ClashDisplay-Semibold.woff2") format("woff2"), url("fonts/ClashDisplay-Semibold.woff") format("woff"), url("fonts/ClashDisplay-Semibold.ttf") format("truetype");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Clash Display";
+    src: url("fonts/ClashDisplay-Bold.woff2") format("woff2"), url("fonts/ClashDisplay-Bold.woff") format("woff"), url("fonts/ClashDisplay-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal
+}
+
+
 
 * {
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Clash Grotesk";
+    color: var(--white-color)
 }
 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+    font-family: "Clash Display";
+}
+
+.font-Grotesk {
+    font-family: "Clash Grotesk";
+}
+
+.font-Display {
+    font-family: "Clash Display";
+}
+
+
 :root {
-    --green-color: #1dbf73;
+    --primary-color: #ff66c4;
+    --secondary-color: #046362;
+    --green-color: #ff66c4;
+    --primary2-color: #c1ff72;
+    --secondary2-color: #2af1c2;
+    /* --green-color: #1dbf73; */
     --white-color: #ffffff;
     --dark-green: #013914;
     --gray-color: #74767e;
 }
+
+
+.title {
+    color: #fff;
+}
+
+.custom-container {
+    @apply container mx-auto px-[15px];
+}
+
+.theme-section {
+    @apply py-[40px] md:py-[60px] lg:py-[80px] xl:py-[100px] px-[0px];
+}
+
+.swiper-slide {
+    height: auto;
+}
+
+.section-padding {
+    @apply p-[20px] sm:p-[30px] md:p-[40px] lg:p-[50px] xl:p-[60px];
+}
+
+.btn-primary {
+    @apply bg-primary border border-primary hover:border-secondary hover:bg-secondary transition-all duration-700 ease-in-out min-w-32 min-h-12 flex items-center justify-center gap-2 py-2 px-4 rounded-theme-r-small;
+}
+
+.btn-primary2 {
+    @apply bg-primary2 border border-primary2 hover:border-secondary hover:bg-secondary transition-all duration-700 ease-in-out min-w-32 min-h-12 flex items-center justify-center gap-2 py-2 px-4 rounded-theme-r-small;
+}
+
+.btn-secondary {
+    @apply bg-secondary border border-secondary hover:border-primary hover:bg-primary transition-all duration-700 ease-in-out min-w-32 min-h-12 flex items-center justify-center gap-2 py-2 px-4 rounded-theme-r-small;
+}
+
+.btn-secondary2 {
+    @apply bg-secondary2 border border-secondary2 hover:border-primary hover:bg-primary hover:text-white transition-all duration-700 ease-in-out min-w-32 min-h-12 flex items-center justify-center gap-2 py-2 px-4 rounded-theme-r-small;
+}
+
+.btn-primary-outline {
+    @apply btn-primary hover:bg-transparent hover:border-white;
+}
+
+.btn-secondary-outline {
+    @apply btn-secondary hover:bg-transparent hover:border-white;
+}
+
+svg {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+label {
+    @apply text-[18px] text-[#fff];
+}
+
+input,
+textarea {
+    border: 1px solid #4b515a;
+    background: unset;
+    leading-trim: both;
+    text-edge: cap;
+    @apply px-[24px] py-[13px] rounded-[10px] w-full text-white text-[16px] leading-[20px] font-[400];
+}
+
+button {
+    color: white;
+    border-radius: 8px;
+    font-weight: 500;
+    min-height: 50px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+ select {
+   border: 1px solid #4b515a;
+   border-radius: 8px;
+}
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+button:disabled {
+    background-color: gray;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    border-radius: 0;
+    overflow: hidden;
+    color: #fff;
+}
+
+.table tr {
+    height: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.table th {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 15px;
+    border: 1px solid #444444;
+}
+
+.table td {
+    padding: 12px 15px;
+    border: 1px solid #444444;
+}
+
+.table td img {
+    width: 50px;
+    height: 25px;
+    object-fit: cover;
+}
+
+.table .delete {
+    width: 20px;
+    cursor: pointer;
+}
+
+.myGigs .container .title h1,
+.orders .container .title h1,
+.messages .container .title h1{
+    font-weight: 500;
+    margin-bottom: 30px;
+    font-size: 32px;
+ }
+
+
+@media(max-width: 767px) {
+
+     .swiper-slide {
+        border-radius: 15px;
+    }
+}
+    
