@@ -63,7 +63,7 @@ const authLogin = async (request, response) => {
             const cookieConfig = {
                 httpOnly: true,  // Prevent client-side access
                 sameSite: 'None', // Required for cross-domain cookies
-                secure: process.env.NODE_ENV === 'production', // Secure for production (HTTPS)
+                // secure: process.env.NODE_ENV === 'production', 
                 maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
                 path: '/', // Accessible across all routes
                 domain: process.env.NODE_ENV === 'production'
