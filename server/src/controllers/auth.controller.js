@@ -61,11 +61,11 @@ const authLogin = async (request, response) => {
             }, JWT_SECRET, { expiresIn: '7 days' });
 
             const cookieConfig = {
-                httpOnly: true,  // Prevent client-side access
-                sameSite: 'None', // Required for cross-domain cookies
-                secure: process.env.NODE_ENV === 'production', 
-                maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
-                path: '/', // Accessible across all routes
+                httpOnly: true,
+                sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax', // Important for cross-site cookies
+                secure: process.env.NODE_ENV === 'production', // Must be true in production (requires HTTPS)
+                maxAge: 60 * 60 * 24 * 7 * 1000, // 7 days
+                path: '/',
                 domain: process.env.NODE_ENV === 'production'
                     ? '.gigstafrontend.netlify.app' // Use the live domain for production
                     : 'localhost', // Use localhost for local development
