@@ -62,13 +62,10 @@ const authLogin = async (request, response) => {
 
             const cookieConfig = {
                 httpOnly: true,
-                sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'lax', // Important for cross-site cookies
+                sameSite: 'lax', // Important for cross-site cookies
                 secure: process.env.NODE_ENV === 'production', // Must be true in production (requires HTTPS)
                 maxAge: 60 * 60 * 24 * 7 * 1000, // 7 days
-                path: '/',
-                domain: process.env.NODE_ENV === 'production'
-                    ? '.gigstafrontend.netlify.app' // Use the live domain for production
-                    : 'localhost', // Use localhost for local development
+                path: '/'
             };
 
             return response.cookie('accessToken', token, cookieConfig)
