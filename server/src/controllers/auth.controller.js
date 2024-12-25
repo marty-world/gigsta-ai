@@ -67,7 +67,7 @@ const authLogin = async (request, response) => {
                 maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
                 path: '/', // Accessible across all routes
                 domain: process.env.NODE_ENV === 'production'
-                    ? '.gigsta.ai' // Use the live domain for production
+                    ? '.gigstafrontend.netlify.app' // Use the live domain for production
                     : 'localhost', // Use localhost for local development
             };
 
