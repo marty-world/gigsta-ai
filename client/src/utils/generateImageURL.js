@@ -9,8 +9,7 @@ const generateImageURL = async (image) => {
     `https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLOUDINARY_ENV}/image/upload`,
     file
   );
-  const imageUrl = data.secure_url;
-  return imageUrl;
+  return data;
 };
 
 export default generateImageURL;

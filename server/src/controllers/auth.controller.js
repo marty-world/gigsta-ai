@@ -61,11 +61,14 @@ const authLogin = async (request, response) => {
             }, JWT_SECRET, { expiresIn: '7 days' });
 
             const cookieConfig = {
-                httpOnly: true,
-                sameSite: 'None',  // Explicitly set to 'None' for cross-site cookies
-                secure: true,  // Must be true for 'None' to work in production (HTTPS)
-                maxAge: 60 * 60 * 24 * 7 * 1000, // 7 days
-                path: '/'
+                httpOnly: true,  // Prevent client-side access
+                sameSite: 'None', // Required for cross-domain cookies
+                secure: process.env.NODE_ENV === 'production', // Secure for production (HTTPS)
+                maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+                path: '/', // Accessible across all routes
+                domain: process.env.NODE_ENV === 'production'
+                    ? '.gigsta.ai' // Use the live domain for production
+                    : 'localhost', // Use localhost for local development
             };
 
             return response.cookie('accessToken', token, cookieConfig)
@@ -113,7 +116,6 @@ const authStatus = async (request, response) => {
         })
     }
     catch (error) {
-        console.log(error, "podsaidposa");
         return response.status(error.status).send({
             error: true,
             message: error.message
